@@ -1,0 +1,73 @@
+{
+  "agent": "inference",
+  "analyzer_timeout_seconds": 300.0,
+  "competition_arcade": {
+    "clone_runs": null,
+    "simulated": false
+  },
+  "concurrent_jobs": 1,
+  "concurrent_jobs_scope": "total",
+  "dataset": "",
+  "deployment": {
+    "kaggle": {
+      "accelerator": "NvidiaRtxPro6000",
+      "additional_dataset_sources": [],
+      "cpu_only": false,
+      "dataset_ref": null,
+      "dry_run": false,
+      "duck_public_harness": false,
+      "enable_internet": false,
+      "kernel_slug": "taaf-glm53-flash-20260902-130458",
+      "kernel_title": "taaf-glm53-flash-20260902-130458",
+      "make_share_version": false,
+      "public": false,
+      "run_as_submission": false
+    },
+    "slurm": {
+      "extra_sbatch_flags": [],
+      "gpu": "B200",
+      "gpu_count": 1,
+      "image": null,
+      "local_server_api_key_file": null,
+      "local_server_base_port": null,
+      "local_server_config": null,
+      "local_server_count": 0,
+      "local_server_repo_dir": null,
+      "local_server_tensor_parallel_size": null,
+      "nodelist": null,
+      "partition": null,
+      "start_local_server": false,
+      "time": "06:00:00"
+    },
+    "source_repos": [
+      "../tufa-arc-agi-framework"
+    ],
+    "target": "inline",
+    "wait": true
+  },
+  "effective_concurrent_jobs": 1,
+  "environments_dir": null,
+  "exclude_tags": [],
+  "experiments_dir": "<SOURCE_ROOT>/local/runs-glm53-flash",
+  "game_count": 1,
+  "game_run_count": 1,
+  "games": [
+    "ls20-9607627b"
+  ],
+  "generated_at": "2026-09-02T05:07:14.207141Z",
+  "include_tags": [],
+  "live_arcade": true,
+  "max_actions": 60,
+  "max_experiment_runtime_hours": 0.75,
+  "max_experiment_runtime_minutes": 45.0,
+  "max_runtime_minutes_per_game": 45.0,
+  "max_runtime_minutes_per_game_source": "explicit",
+  "model": "glm-5.3-flash",
+  "n_passes": 1,
+  "pass_schedule": [
+    0
+  ],
+  "runner": "taaf",
+  "version": 2,
+  "wave_count": 1
+}

@@ -1,0 +1,1005 @@
+{
+  "generated_at": "2026-09-04T03:33:51.842663+00:00",
+  "complete": true,
+  "source_summary_updated_at": "2026-09-04T03:31:34.073768+00:00",
+  "slots": [
+    {
+      "slot": "r1-1-belief",
+      "arm": "belief",
+      "replicate": 1,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "gave_up",
+      "budget_termination": false,
+      "budget_termination_kind": null,
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T10:35:06.124897",
+      "game_final_wallclock_seconds": 725.2971438890017,
+      "finished": true,
+      "probe_assigned": false,
+      "belief_assigned": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 89,
+      "level1_actions_spent": 89,
+      "levels_completed": 1,
+      "score_cap_1_15": 0.21822641441376447,
+      "raw_score": 0.21822641441376447,
+      "actions": 120,
+      "no_change_actions": 15,
+      "longest_no_change_streak": 7,
+      "elapsed_seconds": 748.734,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 0,
+      "probe_interventions": 0,
+      "belief_summary_action_events": 120,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 44,
+        "responses": 41,
+        "errors": 3,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 3
+        },
+        "provider_error_http_status": {
+          "None": 3
+        },
+        "latency_completed_requests_n": 44,
+        "latency_median_seconds": 10.804582713000855,
+        "latency_p95_seconds": 33.162609761002386,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 1027031,
+          "completion_tokens_including_reasoning": 17423,
+          "reasoning_tokens": 6344,
+          "cached_input_tokens": 685440,
+          "total_tokens": 1044454,
+          "uncached_input_tokens": 341591
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 1027031,
+          "completion_tokens_including_reasoning": 17423,
+          "reasoning_tokens": 6344,
+          "cached_input_tokens": 685440,
+          "total_tokens": 1044454,
+          "uncached_input_tokens": 341591
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 41,
+          "completion_tokens_including_reasoning": 41,
+          "reasoning_tokens": 41,
+          "cached_input_tokens": 41,
+          "total_tokens": 41,
+          "uncached_input_tokens": 41
+        },
+        "belief_fact_injection_requests": 42,
+        "belief_fact_injection_rate": 0.9545454545454546,
+        "distinct_injected_evidence_ids": 66,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 41,
+        "tool_error_text_results": 9,
+        "tool_error_text_classes": {
+          "NameError": 2,
+          "TypeError": 6,
+          "KeyError": 1
+        },
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r1-2-probe",
+      "arm": "probe",
+      "replicate": 1,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "cancelled",
+      "budget_termination": true,
+      "budget_termination_kind": "inner_soft_budget_cancelled",
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T10:35:06.143578",
+      "game_final_wallclock_seconds": 1161.2547542930006,
+      "finished": true,
+      "probe_assigned": true,
+      "belief_assigned": false,
+      "first_level_success": 0,
+      "first_level_actions_to_success": null,
+      "level1_actions_spent": 118,
+      "levels_completed": 0,
+      "score_cap_1_15": 0.0,
+      "raw_score": 0.0,
+      "actions": 118,
+      "no_change_actions": 54,
+      "longest_no_change_streak": 46,
+      "elapsed_seconds": 1185.552,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 91,
+      "probe_interventions": 82,
+      "belief_summary_action_events": 0,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 130,
+        "responses": 126,
+        "errors": 4,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "HTTPError": 2,
+          "ReadTimeout": 2
+        },
+        "provider_error_http_status": {
+          "429": 2,
+          "None": 2
+        },
+        "latency_completed_requests_n": 130,
+        "latency_median_seconds": 5.315457550499559,
+        "latency_p95_seconds": 18.191884028998174,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 3679200,
+          "completion_tokens_including_reasoning": 16370,
+          "reasoning_tokens": 4341,
+          "cached_input_tokens": 1364992,
+          "total_tokens": 3695570,
+          "uncached_input_tokens": 2314208
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 3679200,
+          "completion_tokens_including_reasoning": 16370,
+          "reasoning_tokens": 4341,
+          "cached_input_tokens": 1364992,
+          "total_tokens": 3695570,
+          "uncached_input_tokens": 2314208
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 126,
+          "completion_tokens_including_reasoning": 126,
+          "reasoning_tokens": 126,
+          "cached_input_tokens": 126,
+          "total_tokens": 126,
+          "uncached_input_tokens": 126
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 126,
+        "tool_error_text_results": 0,
+        "tool_error_text_classes": {},
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r1-3-combined",
+      "arm": "combined",
+      "replicate": 1,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "cancelled",
+      "budget_termination": true,
+      "budget_termination_kind": "inner_soft_budget_cancelled",
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T10:47:34.539291",
+      "game_final_wallclock_seconds": 1162.2770354120003,
+      "finished": true,
+      "probe_assigned": true,
+      "belief_assigned": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 34,
+      "level1_actions_spent": 34,
+      "levels_completed": 1,
+      "score_cap_1_15": 1.4953040039545231,
+      "raw_score": 1.4953040039545231,
+      "actions": 35,
+      "no_change_actions": 1,
+      "longest_no_change_streak": 1,
+      "elapsed_seconds": 1187.024,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 35,
+      "probe_interventions": 24,
+      "belief_summary_action_events": 35,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 64,
+        "responses": 58,
+        "errors": 6,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 6
+        },
+        "provider_error_http_status": {
+          "None": 6
+        },
+        "latency_completed_requests_n": 64,
+        "latency_median_seconds": 12.801296780498888,
+        "latency_p95_seconds": 44.38345088999995,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 1601995,
+          "completion_tokens_including_reasoning": 22938,
+          "reasoning_tokens": 15426,
+          "cached_input_tokens": 528064,
+          "total_tokens": 1624933,
+          "uncached_input_tokens": 1073931
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 1601995,
+          "completion_tokens_including_reasoning": 22938,
+          "reasoning_tokens": 15426,
+          "cached_input_tokens": 528064,
+          "total_tokens": 1624933,
+          "uncached_input_tokens": 1073931
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 58,
+          "completion_tokens_including_reasoning": 58,
+          "reasoning_tokens": 58,
+          "cached_input_tokens": 58,
+          "total_tokens": 58,
+          "uncached_input_tokens": 58
+        },
+        "belief_fact_injection_requests": 62,
+        "belief_fact_injection_rate": 0.96875,
+        "distinct_injected_evidence_ids": 35,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 58,
+        "tool_error_text_results": 2,
+        "tool_error_text_classes": {
+          "ValueError": 1,
+          "TypeError": 1
+        },
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r1-4-baseline",
+      "arm": "baseline",
+      "replicate": 1,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "cancelled",
+      "budget_termination": true,
+      "budget_termination_kind": "inner_soft_budget_cancelled",
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T10:54:51.632974",
+      "game_final_wallclock_seconds": 1165.207200509998,
+      "finished": true,
+      "probe_assigned": false,
+      "belief_assigned": false,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 43,
+      "level1_actions_spent": 43,
+      "levels_completed": 1,
+      "score_cap_1_15": 0.9348682685621572,
+      "raw_score": 0.9348682685621572,
+      "actions": 89,
+      "no_change_actions": 9,
+      "longest_no_change_streak": 3,
+      "elapsed_seconds": 1185.081,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 0,
+      "probe_interventions": 0,
+      "belief_summary_action_events": 0,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 68,
+        "responses": 64,
+        "errors": 4,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 4
+        },
+        "provider_error_http_status": {
+          "None": 4
+        },
+        "latency_completed_requests_n": 68,
+        "latency_median_seconds": 10.945897907498875,
+        "latency_p95_seconds": 33.651097836998815,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 1683060,
+          "completion_tokens_including_reasoning": 23562,
+          "reasoning_tokens": 13844,
+          "cached_input_tokens": 915584,
+          "total_tokens": 1706622,
+          "uncached_input_tokens": 767476
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 1683060,
+          "completion_tokens_including_reasoning": 23562,
+          "reasoning_tokens": 13844,
+          "cached_input_tokens": 915584,
+          "total_tokens": 1706622,
+          "uncached_input_tokens": 767476
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 64,
+          "completion_tokens_including_reasoning": 64,
+          "reasoning_tokens": 64,
+          "cached_input_tokens": 64,
+          "total_tokens": 64,
+          "uncached_input_tokens": 64
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 64,
+        "tool_error_text_results": 1,
+        "tool_error_text_classes": {
+          "ValueError": 1
+        },
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-1-probe",
+      "arm": "probe",
+      "replicate": 2,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "cancelled",
+      "budget_termination": true,
+      "budget_termination_kind": "inner_soft_budget_cancelled",
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T11:14:36.450200",
+      "game_final_wallclock_seconds": 1165.775830581002,
+      "finished": true,
+      "probe_assigned": true,
+      "belief_assigned": false,
+      "first_level_success": 0,
+      "first_level_actions_to_success": null,
+      "level1_actions_spent": 22,
+      "levels_completed": 0,
+      "score_cap_1_15": 0.0,
+      "raw_score": 0.0,
+      "actions": 22,
+      "no_change_actions": 2,
+      "longest_no_change_streak": 2,
+      "elapsed_seconds": 1184.938,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 22,
+      "probe_interventions": 13,
+      "belief_summary_action_events": 0,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 52,
+        "responses": 45,
+        "errors": 7,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 7
+        },
+        "provider_error_http_status": {
+          "None": 7
+        },
+        "latency_completed_requests_n": 52,
+        "latency_median_seconds": 17.819044109999595,
+        "latency_p95_seconds": 61.28142868699797,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 1002234,
+          "completion_tokens_including_reasoning": 19178,
+          "reasoning_tokens": 11639,
+          "cached_input_tokens": 812288,
+          "total_tokens": 1021412,
+          "uncached_input_tokens": 189946
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 1002234,
+          "completion_tokens_including_reasoning": 19178,
+          "reasoning_tokens": 11639,
+          "cached_input_tokens": 812288,
+          "total_tokens": 1021412,
+          "uncached_input_tokens": 189946
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 45,
+          "completion_tokens_including_reasoning": 45,
+          "reasoning_tokens": 45,
+          "cached_input_tokens": 45,
+          "total_tokens": 45,
+          "uncached_input_tokens": 45
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 45,
+        "tool_error_text_results": 2,
+        "tool_error_text_classes": {
+          "NameError": 1,
+          "KeyError": 1
+        },
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-2-baseline",
+      "arm": "baseline",
+      "replicate": 2,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "gave_up",
+      "budget_termination": false,
+      "budget_termination_kind": null,
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T11:14:36.430947",
+      "game_final_wallclock_seconds": 757.8895285839972,
+      "finished": true,
+      "probe_assigned": false,
+      "belief_assigned": false,
+      "first_level_success": 0,
+      "first_level_actions_to_success": null,
+      "level1_actions_spent": 120,
+      "levels_completed": 0,
+      "score_cap_1_15": 0.0,
+      "raw_score": 0.0,
+      "actions": 120,
+      "no_change_actions": 3,
+      "longest_no_change_streak": 3,
+      "elapsed_seconds": 777.056,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 0,
+      "probe_interventions": 0,
+      "belief_summary_action_events": 0,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 37,
+        "responses": 35,
+        "errors": 2,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 2
+        },
+        "provider_error_http_status": {
+          "None": 2
+        },
+        "latency_completed_requests_n": 37,
+        "latency_median_seconds": 13.076922386997467,
+        "latency_p95_seconds": 54.654030920006335,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 868925,
+          "completion_tokens_including_reasoning": 14046,
+          "reasoning_tokens": 8579,
+          "cached_input_tokens": 488256,
+          "total_tokens": 882971,
+          "uncached_input_tokens": 380669
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 868925,
+          "completion_tokens_including_reasoning": 14046,
+          "reasoning_tokens": 8579,
+          "cached_input_tokens": 488256,
+          "total_tokens": 882971,
+          "uncached_input_tokens": 380669
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 35,
+          "completion_tokens_including_reasoning": 35,
+          "reasoning_tokens": 35,
+          "cached_input_tokens": 35,
+          "total_tokens": 35,
+          "uncached_input_tokens": 35
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 35,
+        "tool_error_text_results": 0,
+        "tool_error_text_classes": {},
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-3-combined",
+      "arm": "combined",
+      "replicate": 2,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "cancelled",
+      "budget_termination": true,
+      "budget_termination_kind": "inner_soft_budget_cancelled",
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T11:27:33.354498",
+      "game_final_wallclock_seconds": 1164.245531765002,
+      "finished": true,
+      "probe_assigned": true,
+      "belief_assigned": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 31,
+      "level1_actions_spent": 31,
+      "levels_completed": 1,
+      "score_cap_1_15": 1.7987215697933703,
+      "raw_score": 1.7987215697933703,
+      "actions": 71,
+      "no_change_actions": 3,
+      "longest_no_change_streak": 3,
+      "elapsed_seconds": 1185.035,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 64,
+      "probe_interventions": 56,
+      "belief_summary_action_events": 71,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 88,
+        "responses": 83,
+        "errors": 5,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 5
+        },
+        "provider_error_http_status": {
+          "None": 5
+        },
+        "latency_completed_requests_n": 88,
+        "latency_median_seconds": 5.327474135501689,
+        "latency_p95_seconds": 42.68023441499827,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2444929,
+          "completion_tokens_including_reasoning": 17777,
+          "reasoning_tokens": 9015,
+          "cached_input_tokens": 451328,
+          "total_tokens": 2462706,
+          "uncached_input_tokens": 1993601
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2444929,
+          "completion_tokens_including_reasoning": 17777,
+          "reasoning_tokens": 9015,
+          "cached_input_tokens": 451328,
+          "total_tokens": 2462706,
+          "uncached_input_tokens": 1993601
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 83,
+          "completion_tokens_including_reasoning": 83,
+          "reasoning_tokens": 83,
+          "cached_input_tokens": 83,
+          "total_tokens": 83,
+          "uncached_input_tokens": 83
+        },
+        "belief_fact_injection_requests": 84,
+        "belief_fact_injection_rate": 0.9545454545454546,
+        "distinct_injected_evidence_ids": 71,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 83,
+        "tool_error_text_results": 2,
+        "tool_error_text_classes": {
+          "TypeError": 1,
+          "ValueError": 1
+        },
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-4-belief",
+      "arm": "belief",
+      "replicate": 2,
+      "status": "completed",
+      "process_exit_status": "completed",
+      "game_outcome": "gave_up",
+      "budget_termination": false,
+      "budget_termination_kind": null,
+      "inline_budget_seconds": 1770,
+      "inline_soft_budget_seconds": 1170,
+      "inline_soft_end_time_local": "2026-09-04T11:34:21.024434",
+      "game_final_wallclock_seconds": 994.8119069290042,
+      "finished": true,
+      "probe_assigned": false,
+      "belief_assigned": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 18,
+      "level1_actions_spent": 22,
+      "levels_completed": 1,
+      "score_cap_1_15": 3.5714285714285716,
+      "raw_score": 3.571428571428571,
+      "actions": 120,
+      "no_change_actions": 0,
+      "longest_no_change_streak": 0,
+      "elapsed_seconds": 1015.102,
+      "time_limit_seconds": 1800,
+      "within_end_to_end_limit": true,
+      "probe_enabled_calls_observed": 0,
+      "probe_interventions": 0,
+      "belief_summary_action_events": 120,
+      "probe_assignment_match": true,
+      "belief_assignment_match": true,
+      "protocol_qualified": true,
+      "protocol_exclusion_reasons": [],
+      "usage": {
+        "requests": 98,
+        "responses": 95,
+        "errors": 3,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 3
+        },
+        "provider_error_http_status": {
+          "None": 3
+        },
+        "latency_completed_requests_n": 98,
+        "latency_median_seconds": 4.8165064604982035,
+        "latency_p95_seconds": 28.67534914999851,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2657343,
+          "completion_tokens_including_reasoning": 18701,
+          "reasoning_tokens": 8253,
+          "cached_input_tokens": 1705472,
+          "total_tokens": 2676044,
+          "uncached_input_tokens": 951871
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2657343,
+          "completion_tokens_including_reasoning": 18701,
+          "reasoning_tokens": 8253,
+          "cached_input_tokens": 1705472,
+          "total_tokens": 2676044,
+          "uncached_input_tokens": 951871
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 95,
+          "completion_tokens_including_reasoning": 95,
+          "reasoning_tokens": 95,
+          "cached_input_tokens": 95,
+          "total_tokens": 95,
+          "uncached_input_tokens": 95
+        },
+        "belief_fact_injection_requests": 94,
+        "belief_fact_injection_rate": 0.9591836734693877,
+        "distinct_injected_evidence_ids": 90,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ]
+      },
+      "tools": {
+        "tool_result_sections": 95,
+        "tool_error_text_results": 4,
+        "tool_error_text_classes": {
+          "KeyError": 1,
+          "TypeError": 1,
+          "NameError": 1,
+          "IndexError": 1
+        },
+        "transcript_files": 1
+      },
+      "artifact_warnings": []
+    }
+  ],
+  "arms_itt": {
+    "baseline": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 0.5,
+      "mean_score_cap_1_15": 0.4674341342810786,
+      "mean_level1_actions_spent": 81.5,
+      "mean_elapsed_seconds": 981.0685,
+      "first_level_successes": 1,
+      "mean_first_level_actions_among_successes": 43,
+      "max_elapsed_seconds": 1185.081,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 1,
+      "game_outcome_counts": {
+        "cancelled": 1,
+        "gave_up": 1
+      },
+      "probe_interventions": 0,
+      "belief_fact_injection_requests": 0
+    },
+    "probe": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 0,
+      "mean_score_cap_1_15": 0.0,
+      "mean_level1_actions_spent": 70,
+      "mean_elapsed_seconds": 1185.245,
+      "first_level_successes": 0,
+      "mean_first_level_actions_among_successes": null,
+      "max_elapsed_seconds": 1185.552,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 2,
+      "game_outcome_counts": {
+        "cancelled": 2
+      },
+      "probe_interventions": 95,
+      "belief_fact_injection_requests": 0
+    },
+    "belief": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 1,
+      "mean_score_cap_1_15": 1.8948274929211681,
+      "mean_level1_actions_spent": 55.5,
+      "mean_elapsed_seconds": 881.918,
+      "first_level_successes": 2,
+      "mean_first_level_actions_among_successes": 53.5,
+      "max_elapsed_seconds": 1015.102,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 0,
+      "game_outcome_counts": {
+        "gave_up": 2
+      },
+      "probe_interventions": 0,
+      "belief_fact_injection_requests": 136
+    },
+    "combined": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 1,
+      "mean_score_cap_1_15": 1.6470127868739466,
+      "mean_level1_actions_spent": 32.5,
+      "mean_elapsed_seconds": 1186.0295,
+      "first_level_successes": 2,
+      "mean_first_level_actions_among_successes": 32.5,
+      "max_elapsed_seconds": 1187.024,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 2,
+      "game_outcome_counts": {
+        "cancelled": 2
+      },
+      "probe_interventions": 80,
+      "belief_fact_injection_requests": 146
+    }
+  },
+  "protocol_qualified_descriptive_subset": {
+    "baseline": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 0.5,
+      "mean_score_cap_1_15": 0.4674341342810786,
+      "mean_level1_actions_spent": 81.5,
+      "mean_elapsed_seconds": 981.0685,
+      "first_level_successes": 1,
+      "mean_first_level_actions_among_successes": 43,
+      "max_elapsed_seconds": 1185.081,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 1,
+      "game_outcome_counts": {
+        "cancelled": 1,
+        "gave_up": 1
+      },
+      "probe_interventions": 0,
+      "belief_fact_injection_requests": 0
+    },
+    "probe": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 0,
+      "mean_score_cap_1_15": 0.0,
+      "mean_level1_actions_spent": 70,
+      "mean_elapsed_seconds": 1185.245,
+      "first_level_successes": 0,
+      "mean_first_level_actions_among_successes": null,
+      "max_elapsed_seconds": 1185.552,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 2,
+      "game_outcome_counts": {
+        "cancelled": 2
+      },
+      "probe_interventions": 95,
+      "belief_fact_injection_requests": 0
+    },
+    "belief": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 1,
+      "mean_score_cap_1_15": 1.8948274929211681,
+      "mean_level1_actions_spent": 55.5,
+      "mean_elapsed_seconds": 881.918,
+      "first_level_successes": 2,
+      "mean_first_level_actions_among_successes": 53.5,
+      "max_elapsed_seconds": 1015.102,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 0,
+      "game_outcome_counts": {
+        "gave_up": 2
+      },
+      "probe_interventions": 0,
+      "belief_fact_injection_requests": 136
+    },
+    "combined": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "protocol_qualified_n": 2,
+      "mean_first_level_success": 1,
+      "mean_score_cap_1_15": 1.6470127868739466,
+      "mean_level1_actions_spent": 32.5,
+      "mean_elapsed_seconds": 1186.0295,
+      "first_level_successes": 2,
+      "mean_first_level_actions_among_successes": 32.5,
+      "max_elapsed_seconds": 1187.024,
+      "within_time_limit_n": 2,
+      "budget_termination_n": 2,
+      "game_outcome_counts": {
+        "cancelled": 2
+      },
+      "probe_interventions": 80,
+      "belief_fact_injection_requests": 146
+    }
+  },
+  "descriptive_factorial_effects": {
+    "mean_first_level_success": {
+      "probe_main": -0.25,
+      "belief_main": 0.75,
+      "interaction": 0.5
+    },
+    "mean_score_cap_1_15": {
+      "probe_main": -0.3576244201641501,
+      "belief_main": 1.537203072757018,
+      "interaction": 0.21961942823385705
+    }
+  },
+  "all_usage": {
+    "requests": 581,
+    "responses": 547,
+    "errors": 34,
+    "unfinished_requests": 0,
+    "provider_error_types": {
+      "ReadTimeout": 32,
+      "HTTPError": 2
+    },
+    "provider_error_http_status": {
+      "None": 32,
+      "429": 2
+    },
+    "latency_completed_requests_n": 581,
+    "latency_median_seconds": 7.073087069002213,
+    "latency_p95_seconds": 41.55293367300328,
+    "latency_missing_terminal_records": 0,
+    "tokens_all_observed_responses": {
+      "prompt_tokens": 14964717,
+      "completion_tokens_including_reasoning": 149995,
+      "reasoning_tokens": 77441,
+      "cached_input_tokens": 6951424,
+      "total_tokens": 15114712,
+      "uncached_input_tokens": 8013293
+    },
+    "tokens_known_field_subtotal": {
+      "prompt_tokens": 14964717,
+      "completion_tokens_including_reasoning": 149995,
+      "reasoning_tokens": 77441,
+      "cached_input_tokens": 6951424,
+      "total_tokens": 15114712,
+      "uncached_input_tokens": 8013293
+    },
+    "token_field_response_coverage": {
+      "prompt_tokens": 547,
+      "completion_tokens_including_reasoning": 547,
+      "reasoning_tokens": 547,
+      "cached_input_tokens": 547,
+      "total_tokens": 547,
+      "uncached_input_tokens": 547
+    },
+    "belief_fact_injection_requests": 282,
+    "belief_fact_injection_rate": 0.4853700516351119,
+    "distinct_injected_evidence_ids": 262,
+    "request_model_settings": [
+      {
+        "model": "glm-5.3-flash",
+        "provider": "bigmodel",
+        "reasoning_effort": "low",
+        "max_output_tokens": 8192
+      }
+    ]
+  },
+  "read_warnings": []
+}

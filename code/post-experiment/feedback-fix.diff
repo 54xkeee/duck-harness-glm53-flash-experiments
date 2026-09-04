@@ -1,0 +1,114 @@
+--- frozen-phase2/tool_agent.py
++++ post-experiment/tool_agent.py
+@@ -1519,6 +1519,71 @@
+             )
+         return json.dumps(result, indent=2)
+ 
++    def _prediction_feedback(self, payload: dict[str, Any], actions: list[dict[str, Any]]) -> dict[str, Any]:
++        executed_count = int(payload.get("executed_count", 1)) if payload.get("executed") else 0
++        current = payload.get("prediction_rejection") or payload
++        evaluation = current.get("prediction") or {}
++        index = executed_count if not current.get("executed") else max(0, executed_count - 1)
++        requested = actions[index].get("prediction") if index < len(actions) else None
++        error = current.get("error")
++        checks = [check for check in evaluation.get("checks", []) if check.get("matched") is False][:8]
++        if error and str(error).startswith("prediction_precondition_failed:"):
++            details = json.loads(str(error).split(":", 1)[1])
++            checks = [dict(zip(details["columns"], row)) for row in details["mismatches"][:8]]
++            error = "prediction_precondition_failed"
++        return {
++            "executed_count": executed_count,
++            "stop_reason": current.get("stop_reason") or payload.get("stop_reason"),
++            "error": error,
++            "rule_id": evaluation.get("rule_id") or (requested.get("rule_id") if isinstance(requested, dict) else None),
++            # A rejected request never obtained a committed rule version.
++            "version": evaluation.get("version"),
++            "mismatched_checks": checks,
++        }
++
++    def _render_prediction_payload(self, payload: dict[str, Any], control: dict[str, Any]) -> str:
++        result = {"host_control": dict(control), "tool": "python", "truncated": False}
++        summary = result["host_control"]
++        summary["mismatched_checks"] = list(summary["mismatched_checks"])
++
++        def render() -> str:
++            return json.dumps(result, ensure_ascii=False, separators=(",", ":"))
++
++        def fit_text(target: dict[str, Any], key: str, value: str) -> None:
++            low, high = 0, len(value)
++            while low < high:
++                middle = (low + high + 1) // 2
++                target[key] = value[:middle]
++                if len(render()) <= self._tool_output_chars:
++                    low = middle
++                else:
++                    high = middle - 1
++            target[key] = value[:low]
++
++        while len(render()) > self._tool_output_chars and summary["mismatched_checks"]:
++            result["truncated"] = True
++            summary["mismatched_checks"].pop()
++        for key in ("error", "rule_id"):
++            if len(render()) > self._tool_output_chars and isinstance(summary.get(key), str):
++                result["truncated"] = True
++                fit_text(summary, key, summary[key])
++        for key in ("returncode", "error", "stdout", "result"):
++            if key not in payload:
++                continue
++            value = payload[key]
++            # Runtime snapshots already have their own pinned host message.
++            if key == "result" and isinstance(value, dict):
++                value = {name: item for name, item in value.items() if name not in {"prediction_state", "evidence_beliefs"}}
++            result[key] = value
++            if len(render()) <= self._tool_output_chars:
++                continue
++            result["truncated"] = True
++            text = value if isinstance(value, str) else json.dumps(value, ensure_ascii=False)
++            fit_text(result, key, text)
++            if len(render()) > self._tool_output_chars:
++                del result[key]
++        return render()
++
+     def _normalize_python_actions(self, value: Any) -> list[dict[str, Any]]:
+         if isinstance(value, str):
+             items = [value]
+@@ -1611,6 +1676,11 @@
+ 
+         current_frame, history_entries = load_runtime_state(state_path)
+         valid_actions = list(_normalize_valid_actions(self._current_valid_actions))
++        prediction_feedback = bool(self._host_prediction())
++        host_control = {
++            "executed_count": 0, "stop_reason": None, "error": None,
++            "rule_id": None, "version": None, "mismatched_checks": [],
++        }
+ 
+         def _serialized_runtime_state(
+             *,
+@@ -1684,6 +1754,10 @@
+             if not isinstance(raw_payload, dict):
+                 raise RuntimeError("action(actions) did not return a JSON-like payload.")
+             compact_payload = self._compact_action_result(raw_payload)
++            if prediction_feedback:
++                feedback = self._prediction_feedback(raw_payload, normalized_actions)
++                feedback["executed_count"] += host_control["executed_count"]
++                host_control.update(feedback)
+             next_valid_actions = raw_payload.get("valid_actions")
+             if isinstance(next_valid_actions, list):
+                 self._current_valid_actions = _normalize_valid_actions(next_valid_actions)
+@@ -1727,7 +1801,7 @@
+                 payload["stdout"] = rendered_stdout
+             elif sandbox_result.get("result") is not None:
+                 payload["result"] = sandbox_result.get("result")
+-            elif action_results:
++            elif action_results and not prediction_feedback:
+                 if len(action_results) == 1:
+                     payload["result"] = action_results[-1]
+                 else:
+@@ -1741,6 +1815,7 @@
+             self._last_step_summary = self._summarize_step_sequence(action_results)
+             self._update_summarized_knowledge_from_step_summary()
+         return _ToolDispatchResult(
++            self._render_prediction_payload(payload, host_control) if prediction_feedback else
+             self._render_tool_payload(payload, truncate_fields=("stdout", "error", "result")),
+             step_executed=step_executed,
+         )

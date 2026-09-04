@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "files": 175,
+  "json_files": 39,
+  "jsonl_rows": 5308,
+  "phases": {
+    "phase1": {
+      "slots": 8,
+      "actions": 695,
+      "request_events": {
+        "request": 581,
+        "response": 547,
+        "error": 34
+      },
+      "scores": {
+        "r1-1-belief": 0.21822641,
+        "r1-2-probe": 0.0,
+        "r1-3-combined": 1.495304,
+        "r1-4-baseline": 0.93486827,
+        "r2-1-probe": 0.0,
+        "r2-2-baseline": 0.0,
+        "r2-3-combined": 1.79872157,
+        "r2-4-belief": 3.57142857
+      }
+    },
+    "phase2": {
+      "slots": 8,
+      "actions": 716,
+      "request_events": {
+        "request": 925,
+        "response": 843,
+        "error": 82
+      },
+      "scores": {
+        "r1-1-combined": 0.0,
+        "r1-2-belief": 0.03103583,
+        "r1-3-baseline": 0.0,
+        "r1-4-prediction": 3.57142857,
+        "r2-1-belief": 0.23371707,
+        "r2-2-prediction": 0.0,
+        "r2-3-baseline": 0.0,
+        "r2-4-combined": 3.57142857
+      }
+    }
+  }
+}

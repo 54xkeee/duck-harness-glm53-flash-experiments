@@ -1,0 +1,9 @@
+slot,replicate,order,arm,status,elapsed_seconds,deadline_exceeded,actions,zero_action,levels_completed,raw_score,score_cap_1_15,no_change_actions,no_change_rate,longest_no_change_streak,probe_actions,belief_uptake_requests,model_requests,model_errors,unfinished_requests,prompt_tokens,completion_tokens,total_tokens,usage_complete
+r1-1-belief,1,1,belief,completed,748.734,False,120,False,1,0.21822641441376447,0.21822641441376447,15,0.125,7,0,42,44,3,0,1027031,17423,1044454,False
+r1-2-probe,1,2,probe,completed,1185.552,False,118,False,0,0.0,0.0,54,0.4576271186440678,46,82,0,130,4,0,3679200,16370,3695570,False
+r1-3-combined,1,3,combined,completed,1187.024,False,35,False,1,1.4953040039545231,1.4953040039545231,1,0.02857142857142857,1,24,62,64,6,0,1601995,22938,1624933,False
+r1-4-baseline,1,4,baseline,completed,1185.081,False,89,False,1,0.9348682685621572,0.9348682685621572,9,0.10112359550561797,3,0,0,68,4,0,1683060,23562,1706622,False
+r2-1-probe,2,1,probe,completed,1184.938,False,22,False,0,0.0,0.0,2,0.09090909090909091,2,13,0,52,7,0,1002234,19178,1021412,False
+r2-2-baseline,2,2,baseline,completed,777.056,False,120,False,0,0.0,0.0,3,0.025,3,0,0,37,2,0,868925,14046,882971,False
+r2-3-combined,2,3,combined,completed,1185.035,False,71,False,1,1.7987215697933703,1.7987215697933703,3,0.04225352112676056,3,56,84,88,5,0,2444929,17777,2462706,False
+r2-4-belief,2,4,belief,completed,1015.102,False,120,False,1,3.571428571428571,3.5714285714285716,0,0.0,0,0,94,98,3,0,2657343,18701,2676044,False

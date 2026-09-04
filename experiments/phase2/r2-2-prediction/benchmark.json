@@ -1,0 +1,172 @@
+{
+  "label": "duck-harness",
+  "n_passes": 1,
+  "solver_label": "duck-harness",
+  "start_time": "2026-09-04T19:17:31.521499",
+  "end_time": "2026-09-04T19:46:33.509643",
+  "game_weights": null,
+  "periodic_save_interval_s": 600.0,
+  "game_runs": [
+    {
+      "game_id": "ls20-9607627b",
+      "number_of_levels": 7,
+      "base_actions_per_level": [
+        22,
+        123,
+        73,
+        84,
+        96,
+        192,
+        186
+      ],
+      "hint": null,
+      "state": "cancelled",
+      "history": [
+        {
+          "action": {
+            "id": "ACTION4",
+            "data": {}
+          },
+          "generated_tokens": 1541,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 66.02239027000041
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 12391,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 665.8384657239999
+        },
+        {
+          "action": {
+            "id": "ACTION2",
+            "data": {}
+          },
+          "generated_tokens": 5191,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 846.8762583980001
+        },
+        {
+          "action": {
+            "id": "ACTION4",
+            "data": {}
+          },
+          "generated_tokens": 1071,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 881.8834599440002
+        },
+        {
+          "action": {
+            "id": "ACTION2",
+            "data": {}
+          },
+          "generated_tokens": 1220,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 918.6939684800004
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 10422,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1249.1824908700005
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 1100,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1286.6962878489999
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 841,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1319.4719770300003
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 2555,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1465.0285160300004
+        },
+        {
+          "action": {
+            "id": "ACTION3",
+            "data": {}
+          },
+          "generated_tokens": 2734,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1551.2227746929998
+        },
+        {
+          "action": {
+            "id": "ACTION3",
+            "data": {}
+          },
+          "generated_tokens": 1648,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1605.7203964760006
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 508,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1625.0046168310005
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 581,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1647.5074780219998
+        },
+        {
+          "action": {
+            "id": "ACTION1",
+            "data": {}
+          },
+          "generated_tokens": 1241,
+          "uncached_input_tokens": 0,
+          "wallclock_seconds": 1698.3817532130001
+        }
+      ],
+      "record_intermediate_states": true,
+      "actions_per_level": [
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "levels_completed": 0,
+      "final_score": 0.0,
+      "solver_note": "tokens=43448",
+      "solver_analysis_html": "solver_analysis/ls20-9607627b_p0.html",
+      "final_generated_tokens": 0,
+      "final_uncached_input_tokens": 0,
+      "final_wallclock_seconds": 1736.3539183970001,
+      "started_at": "2026-09-04T19:17:35.828978"
+    }
+  ]
+}

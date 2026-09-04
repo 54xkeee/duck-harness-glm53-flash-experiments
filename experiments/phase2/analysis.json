@@ -1,0 +1,1609 @@
+{
+  "complete": true,
+  "generated_at": "2026-09-04T12:15:28.027425+00:00",
+  "config": {
+    "jobs": 2,
+    "max_actions": 1200,
+    "per_run_seconds": 1800,
+    "cleanup_seconds": 30,
+    "seed": 20260905,
+    "model": "glm-5.3-flash",
+    "game": "ls20",
+    "repeats": 2,
+    "scoring": {
+      "checked_on": "2026-09-04",
+      "cap": 1.15,
+      "formula": "s_i = completed_i ? min(1.15, (h_i/a_i)^2) : 0; game = 100 * min(sum(i*s_i)/sum(i), sum(i*completed_i)/sum(i)), i=1..L",
+      "source": "https://docs.arcprize.org/methodology",
+      "changelog": "https://docs.arcprize.org/toolkit/overview (0.9.7)"
+    },
+    "created_at": "2026-09-04T10:18:48.785860+00:00",
+    "effective_solver_seconds": 1740,
+    "inline_deployment_seconds": 2340,
+    "startup_reserved_seconds": 30,
+    "api_failure_limit": 3,
+    "frozen_source_files": [
+      "ARC3-Inference/inference/__init__.py",
+      "ARC3-Inference/inference/agent/action_names.py",
+      "ARC3-Inference/inference/agent/evidence_controller.py",
+      "ARC3-Inference/inference/agent/prediction_controller.py",
+      "ARC3-Inference/inference/agent/prompts.py",
+      "ARC3-Inference/inference/agent/python_tool_sandbox.py",
+      "ARC3-Inference/inference/agent/runtime_state.py",
+      "ARC3-Inference/inference/agent/tool_agent.py",
+      "ARC3-Inference/inference/agent/vision_context.py",
+      "ARC3-Inference/inference/agent/__init__.py",
+      "ARC3-Inference/inference/framework/kaggle.py",
+      "ARC3-Inference/inference/framework/run.py",
+      "ARC3-Inference/inference/framework/solver.py",
+      "ARC3-Inference/inference/framework/__init__.py",
+      "ARC3-Inference/inference/tools/chat.py",
+      "ARC3-Inference/inference/tools/config_value.py",
+      "ARC3-Inference/inference/tools/eval.py",
+      "ARC3-Inference/inference/tools/eval_plot.py",
+      "ARC3-Inference/inference/tools/significance.py",
+      "ARC3-Inference/inference/tools/traces.py",
+      "ARC3-Inference/inference/tools/vllm_runtime_lora_guard.py",
+      "ARC3-Inference/inference/tools/__init__.py",
+      "ARC3-Inference/inference/utils/grid_utils.py",
+      "ARC3-Inference/inference/utils/openai_compat.py",
+      "ARC3-Inference/inference/utils/run_artifacts.py",
+      "ARC3-Inference/inference/utils/segmentation.py",
+      "ARC3-Inference/inference/utils/viewer_artifacts.py",
+      "ARC3-Inference/inference/utils/__init__.py",
+      "tufa-arc-agi-framework/src/taaf/benchmark.py",
+      "tufa-arc-agi-framework/src/taaf/competition_arcade.py",
+      "tufa-arc-agi-framework/src/taaf/deploy.py",
+      "tufa-arc-agi-framework/src/taaf/deploy_inline.py",
+      "tufa-arc-agi-framework/src/taaf/deploy_kaggle.py",
+      "tufa-arc-agi-framework/src/taaf/deploy_slurm.py",
+      "tufa-arc-agi-framework/src/taaf/diagnostics.py",
+      "tufa-arc-agi-framework/src/taaf/game.py",
+      "tufa-arc-agi-framework/src/taaf/game_api.py",
+      "tufa-arc-agi-framework/src/taaf/game_examples.py",
+      "tufa-arc-agi-framework/src/taaf/kaggle_random.py",
+      "tufa-arc-agi-framework/src/taaf/solver.py",
+      "tufa-arc-agi-framework/src/taaf/solver_examples.py",
+      "tufa-arc-agi-framework/src/taaf/standard_benchmarks.py",
+      "tufa-arc-agi-framework/src/taaf/support.py",
+      "tufa-arc-agi-framework/src/taaf/__init__.py",
+      "local/run_prediction_experiment.py",
+      "local/analyze_prediction_experiment.py",
+      "local/test_prediction_experiment.py",
+      "local/run_verified_experiment.py",
+      "local/analyze_verified_experiment.py",
+      "local/PREDICTION_EXPERIMENT.md"
+    ],
+    "randomization": "two replicate blocks; random.Random(seed).shuffle; no provider seed assumed",
+    "model_settings": {
+      "LOCAL_ANALYZER_PROVIDER": "bigmodel",
+      "LOCAL_ANALYZER_MODEL_ID": "glm-5.3-flash",
+      "LOCAL_ANALYZER_CONTEXT_WINDOW": "65536",
+      "LOCAL_ANALYZER_MAX_OUTPUT": "8192",
+      "LOCAL_ANALYZER_TIMEOUT": "90",
+      "LOCAL_ANALYZER_TEMPERATURE": "0.6",
+      "LOCAL_ANALYZER_TOP_P": "0.95",
+      "LOCAL_ANALYZER_TOP_K": "20",
+      "LOCAL_ANALYZER_TOOL_STEPS": "0",
+      "LOCAL_ANALYZER_TOOL_TIMEOUT": "30",
+      "LOCAL_ANALYZER_TOOL_OUTPUT_TOKENS": "1024",
+      "LOCAL_ANALYZER_ENABLE_THINKING": "true",
+      "LOCAL_ANALYZER_REASONING_EFFORT": "low",
+      "LOCAL_ANALYZER_BASE_URL": "https://open.bigmodel.cn/api/paas/v4/",
+      "MULTIMODAL_CONTEXT": "current_grid",
+      "MULTIMODAL_UPSCALE": "16"
+    }
+  },
+  "slots": [
+    {
+      "slot": "r1-1-combined",
+      "arm": "combined",
+      "replicate": 1,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 0,
+      "first_level_actions_to_success": null,
+      "full_game_success": 0,
+      "levels_completed": 0,
+      "score_cap_1_15": 0.0,
+      "raw_benchmark_score": 0.0,
+      "benchmark_recomputed_score": 0.0,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        14
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 14,
+          "max_levels": 0,
+          "end_action": 14,
+          "end_levels": 0
+        }
+      ],
+      "actions": 14,
+      "elapsed_seconds": 1753.914,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 2,
+      "longest_no_change_streak": 2,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 14,
+        "committed_action_tickets": 14,
+        "precommitted_predictions": 12,
+        "scored_predictions": 12,
+        "prediction_action_coverage": 0.8571428571428571,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 2,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 12,
+          "matched": 5,
+          "mismatched": 7,
+          "match_rate": 0.4166666666666667
+        },
+        "within_scope_predictions": {
+          "scored": 12,
+          "matched": 5,
+          "mismatched": 7,
+          "match_rate": 0.4166666666666667
+        },
+        "boundary_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "all_boundary_actions": 0,
+        "changed_cell_predictions": {
+          "scored": 11,
+          "matched": 4,
+          "mismatched": 7,
+          "match_rate": 0.36363636363636365
+        },
+        "stationary_cell_predictions": {
+          "scored": 1,
+          "matched": 1,
+          "mismatched": 0,
+          "match_rate": 1.0
+        },
+        "checked_cell_count": 47,
+        "predicted_changed_cell_count": 46,
+        "observed_changed_cell_count_on_scored_actions": 522,
+        "observed_changed_cells_checked": 33,
+        "observed_changed_cell_coverage_micro": 0.06321839080459771,
+        "stop_interventions": 9,
+        "stop_reasons": {
+          "prediction_mismatch": 7,
+          "prediction_required": 2
+        },
+        "rejected_attempts": 22,
+        "rejection_reasons": {
+          "prediction_invalid": 5,
+          "prediction_rule_contested": 12,
+          "prediction_precondition_failed": 5
+        },
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 11,
+        "revised_rule_versions": 7,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 1,
+          "matched": 0,
+          "mismatched": 1,
+          "match_rate": 0.0
+        }
+      },
+      "usage": {
+        "requests": 107,
+        "responses": 93,
+        "errors": 14,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 14
+        },
+        "provider_error_http_status": {
+          "None": 14
+        },
+        "latency_completed_requests_n": 107,
+        "latency_median_seconds": 9.30987213000003,
+        "latency_p95_seconds": 47.33130675100006,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2318798,
+          "completion_tokens_including_reasoning": 34567,
+          "reasoning_tokens": 21645,
+          "cached_input_tokens": 1801664,
+          "total_tokens": 2353365,
+          "uncached_input_tokens": 517134
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2318798,
+          "completion_tokens_including_reasoning": 34567,
+          "reasoning_tokens": 21645,
+          "cached_input_tokens": 1801664,
+          "total_tokens": 2353365,
+          "uncached_input_tokens": 517134
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 93,
+          "completion_tokens_including_reasoning": 93,
+          "reasoning_tokens": 93,
+          "cached_input_tokens": 93,
+          "total_tokens": 93,
+          "uncached_input_tokens": 93
+        },
+        "belief_fact_injection_requests": 101,
+        "belief_fact_injection_rate": 0.9439252336448598,
+        "distinct_injected_evidence_ids": 14,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 107,
+        "distinct_injected_prediction_ids": 14,
+        "provider_error_codes": {
+          "None": 14
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 93,
+        "tool_error_text_results": 2,
+        "tool_error_text_classes": {
+          "TypeError": 2
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r1-2-belief",
+      "arm": "belief",
+      "replicate": 1,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 236,
+      "full_game_success": 0,
+      "levels_completed": 1,
+      "score_cap_1_15": 0.031035827143267535,
+      "raw_benchmark_score": 0.031035827143267535,
+      "benchmark_recomputed_score": 0.031035827143267535,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        236
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 142,
+          "max_levels": 0,
+          "end_action": 142,
+          "reset_action": 142,
+          "reset_progress_drop": false,
+          "end_levels": 0
+        },
+        {
+          "start_action": 143,
+          "actions": 1,
+          "max_levels": 0,
+          "end_action": 143,
+          "reset_action": 143,
+          "reset_progress_drop": false,
+          "end_levels": 0
+        },
+        {
+          "start_action": 144,
+          "actions": 93,
+          "max_levels": 1,
+          "end_action": 236,
+          "end_levels": 1
+        }
+      ],
+      "actions": 236,
+      "elapsed_seconds": 1753.913,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 20,
+      "longest_no_change_streak": 8,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 236,
+        "committed_action_tickets": 0,
+        "precommitted_predictions": 0,
+        "scored_predictions": 0,
+        "prediction_action_coverage": 0.0,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 0,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "within_scope_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "boundary_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "all_boundary_actions": 0,
+        "changed_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "stationary_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "checked_cell_count": null,
+        "predicted_changed_cell_count": null,
+        "observed_changed_cell_count_on_scored_actions": null,
+        "observed_changed_cells_checked": null,
+        "observed_changed_cell_coverage_micro": null,
+        "stop_interventions": 0,
+        "stop_reasons": {},
+        "rejected_attempts": 0,
+        "rejection_reasons": {},
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 0,
+        "revised_rule_versions": 0,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        }
+      },
+      "usage": {
+        "requests": 126,
+        "responses": 119,
+        "errors": 7,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 6,
+          "HTTPError": 1
+        },
+        "provider_error_http_status": {
+          "None": 6,
+          "429": 1
+        },
+        "latency_completed_requests_n": 126,
+        "latency_median_seconds": 6.357823258500048,
+        "latency_p95_seconds": 32.35695845999999,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 3617155,
+          "completion_tokens_including_reasoning": 30835,
+          "reasoning_tokens": 13838,
+          "cached_input_tokens": 1033152,
+          "total_tokens": 3647990,
+          "uncached_input_tokens": 2584003
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 3617155,
+          "completion_tokens_including_reasoning": 30835,
+          "reasoning_tokens": 13838,
+          "cached_input_tokens": 1033152,
+          "total_tokens": 3647990,
+          "uncached_input_tokens": 2584003
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 119,
+          "completion_tokens_including_reasoning": 119,
+          "reasoning_tokens": 119,
+          "cached_input_tokens": 119,
+          "total_tokens": 119,
+          "uncached_input_tokens": 119
+        },
+        "belief_fact_injection_requests": 124,
+        "belief_fact_injection_rate": 0.9841269841269841,
+        "distinct_injected_evidence_ids": 192,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 0,
+        "distinct_injected_prediction_ids": 0,
+        "provider_error_codes": {
+          "None": 6,
+          "1305": 1
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 119,
+        "tool_error_text_results": 7,
+        "tool_error_text_classes": {
+          "NameError": 1,
+          "AssertionError": 1,
+          "ImportError": 1,
+          "KeyError": 3,
+          "TypeError": 1
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r1-3-baseline",
+      "arm": "baseline",
+      "replicate": 1,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 0,
+      "first_level_actions_to_success": null,
+      "full_game_success": 0,
+      "levels_completed": 0,
+      "score_cap_1_15": 0.0,
+      "raw_benchmark_score": 0.0,
+      "benchmark_recomputed_score": 0.0,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        149
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 148,
+          "max_levels": 0,
+          "end_action": 148,
+          "reset_action": 148,
+          "reset_progress_drop": false,
+          "end_levels": 0
+        },
+        {
+          "start_action": 149,
+          "actions": 1,
+          "max_levels": 0,
+          "end_action": 149,
+          "end_levels": 0
+        }
+      ],
+      "actions": 149,
+      "elapsed_seconds": 1756.56,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 16,
+      "longest_no_change_streak": 5,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 149,
+        "committed_action_tickets": 0,
+        "precommitted_predictions": 0,
+        "scored_predictions": 0,
+        "prediction_action_coverage": 0.0,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 0,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "within_scope_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "boundary_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "all_boundary_actions": 0,
+        "changed_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "stationary_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "checked_cell_count": null,
+        "predicted_changed_cell_count": null,
+        "observed_changed_cell_count_on_scored_actions": null,
+        "observed_changed_cells_checked": null,
+        "observed_changed_cell_coverage_micro": null,
+        "stop_interventions": 0,
+        "stop_reasons": {},
+        "rejected_attempts": 0,
+        "rejection_reasons": {},
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 0,
+        "revised_rule_versions": 0,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        }
+      },
+      "usage": {
+        "requests": 105,
+        "responses": 100,
+        "errors": 5,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 5
+        },
+        "provider_error_http_status": {
+          "None": 5
+        },
+        "latency_completed_requests_n": 105,
+        "latency_median_seconds": 7.65635948399995,
+        "latency_p95_seconds": 41.91120737700021,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2775868,
+          "completion_tokens_including_reasoning": 31748,
+          "reasoning_tokens": 19460,
+          "cached_input_tokens": 1496832,
+          "total_tokens": 2807616,
+          "uncached_input_tokens": 1279036
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2775868,
+          "completion_tokens_including_reasoning": 31748,
+          "reasoning_tokens": 19460,
+          "cached_input_tokens": 1496832,
+          "total_tokens": 2807616,
+          "uncached_input_tokens": 1279036
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 100,
+          "completion_tokens_including_reasoning": 100,
+          "reasoning_tokens": 100,
+          "cached_input_tokens": 100,
+          "total_tokens": 100,
+          "uncached_input_tokens": 100
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 0,
+        "distinct_injected_prediction_ids": 0,
+        "provider_error_codes": {
+          "None": 5
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 98,
+        "tool_error_text_results": 1,
+        "tool_error_text_classes": {
+          "TypeError": 1
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r1-4-prediction",
+      "arm": "prediction",
+      "replicate": 1,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 21,
+      "full_game_success": 0,
+      "levels_completed": 1,
+      "score_cap_1_15": 3.5714285714285716,
+      "raw_benchmark_score": 3.571428571428571,
+      "benchmark_recomputed_score": 3.5714285714285716,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        21,
+        28
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 49,
+          "max_levels": 1,
+          "end_action": 49,
+          "end_levels": 1
+        }
+      ],
+      "actions": 49,
+      "elapsed_seconds": 1753.966,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 0,
+      "longest_no_change_streak": 0,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 49,
+        "committed_action_tickets": 49,
+        "precommitted_predictions": 48,
+        "scored_predictions": 48,
+        "prediction_action_coverage": 0.9795918367346939,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 1,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 48,
+          "matched": 34,
+          "mismatched": 14,
+          "match_rate": 0.7083333333333334
+        },
+        "within_scope_predictions": {
+          "scored": 47,
+          "matched": 34,
+          "mismatched": 13,
+          "match_rate": 0.723404255319149
+        },
+        "boundary_predictions": {
+          "scored": 1,
+          "matched": 0,
+          "mismatched": 1,
+          "match_rate": 0.0
+        },
+        "all_boundary_actions": 1,
+        "changed_cell_predictions": {
+          "scored": 22,
+          "matched": 8,
+          "mismatched": 14,
+          "match_rate": 0.36363636363636365
+        },
+        "stationary_cell_predictions": {
+          "scored": 26,
+          "matched": 26,
+          "mismatched": 0,
+          "match_rate": 1.0
+        },
+        "checked_cell_count": 70,
+        "predicted_changed_cell_count": 44,
+        "observed_changed_cell_count_on_scored_actions": 2515,
+        "observed_changed_cells_checked": 30,
+        "observed_changed_cell_coverage_micro": 0.011928429423459244,
+        "stop_interventions": 15,
+        "stop_reasons": {
+          "prediction_mismatch": 14,
+          "prediction_required": 1
+        },
+        "rejected_attempts": 28,
+        "rejection_reasons": {
+          "prediction_precondition_failed": 15,
+          "prediction_rule_contested": 10,
+          "prediction_invalid": 3
+        },
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 18,
+        "revised_rule_versions": 4,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 24,
+          "matched": 23,
+          "mismatched": 1,
+          "match_rate": 0.9583333333333334
+        }
+      },
+      "usage": {
+        "requests": 155,
+        "responses": 145,
+        "errors": 10,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 10
+        },
+        "provider_error_http_status": {
+          "None": 10
+        },
+        "latency_completed_requests_n": 155,
+        "latency_median_seconds": 5.65810336100003,
+        "latency_p95_seconds": 41.88914794400034,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 3551145,
+          "completion_tokens_including_reasoning": 38766,
+          "reasoning_tokens": 13712,
+          "cached_input_tokens": 2606272,
+          "total_tokens": 3589911,
+          "uncached_input_tokens": 944873
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 3551145,
+          "completion_tokens_including_reasoning": 38766,
+          "reasoning_tokens": 13712,
+          "cached_input_tokens": 2606272,
+          "total_tokens": 3589911,
+          "uncached_input_tokens": 944873
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 145,
+          "completion_tokens_including_reasoning": 145,
+          "reasoning_tokens": 145,
+          "cached_input_tokens": 145,
+          "total_tokens": 145,
+          "uncached_input_tokens": 145
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 155,
+        "distinct_injected_prediction_ids": 45,
+        "provider_error_codes": {
+          "None": 10
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 145,
+        "tool_error_text_results": 7,
+        "tool_error_text_classes": {
+          "AttributeError": 1,
+          "NameError": 1,
+          "TypeError": 2,
+          "ValueError": 2,
+          "IndexError": 1
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-1-belief",
+      "arm": "belief",
+      "replicate": 2,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 86,
+      "full_game_success": 0,
+      "levels_completed": 1,
+      "score_cap_1_15": 0.2337170671405393,
+      "raw_benchmark_score": 0.2337170671405393,
+      "benchmark_recomputed_score": 0.2337170671405393,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        86,
+        98
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 184,
+          "max_levels": 1,
+          "end_action": 184,
+          "reset_action": 184,
+          "reset_progress_drop": false,
+          "end_levels": 1
+        }
+      ],
+      "actions": 184,
+      "elapsed_seconds": 1755.503,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 5,
+      "longest_no_change_streak": 3,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 184,
+        "committed_action_tickets": 0,
+        "precommitted_predictions": 0,
+        "scored_predictions": 0,
+        "prediction_action_coverage": 0.0,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 0,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "within_scope_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "boundary_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "all_boundary_actions": 0,
+        "changed_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "stationary_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "checked_cell_count": null,
+        "predicted_changed_cell_count": null,
+        "observed_changed_cell_count_on_scored_actions": null,
+        "observed_changed_cells_checked": null,
+        "observed_changed_cell_coverage_micro": null,
+        "stop_interventions": 0,
+        "stop_reasons": {},
+        "rejected_attempts": 0,
+        "rejection_reasons": {},
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 0,
+        "revised_rule_versions": 0,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        }
+      },
+      "usage": {
+        "requests": 105,
+        "responses": 97,
+        "errors": 8,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 8
+        },
+        "provider_error_http_status": {
+          "None": 8
+        },
+        "latency_completed_requests_n": 105,
+        "latency_median_seconds": 9.999056788000416,
+        "latency_p95_seconds": 37.91374153400011,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2826063,
+          "completion_tokens_including_reasoning": 35522,
+          "reasoning_tokens": 18224,
+          "cached_input_tokens": 1584960,
+          "total_tokens": 2861585,
+          "uncached_input_tokens": 1241103
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2826063,
+          "completion_tokens_including_reasoning": 35522,
+          "reasoning_tokens": 18224,
+          "cached_input_tokens": 1584960,
+          "total_tokens": 2861585,
+          "uncached_input_tokens": 1241103
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 97,
+          "completion_tokens_including_reasoning": 97,
+          "reasoning_tokens": 97,
+          "cached_input_tokens": 97,
+          "total_tokens": 97,
+          "uncached_input_tokens": 97
+        },
+        "belief_fact_injection_requests": 103,
+        "belief_fact_injection_rate": 0.9809523809523809,
+        "distinct_injected_evidence_ids": 129,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 0,
+        "distinct_injected_prediction_ids": 0,
+        "provider_error_codes": {
+          "None": 8
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 97,
+        "tool_error_text_results": 3,
+        "tool_error_text_classes": {
+          "ValueError": 3
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-2-prediction",
+      "arm": "prediction",
+      "replicate": 2,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 0,
+      "first_level_actions_to_success": null,
+      "full_game_success": 0,
+      "levels_completed": 0,
+      "score_cap_1_15": 0.0,
+      "raw_benchmark_score": 0.0,
+      "benchmark_recomputed_score": 0.0,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        14
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 14,
+          "max_levels": 0,
+          "end_action": 14,
+          "end_levels": 0
+        }
+      ],
+      "actions": 14,
+      "elapsed_seconds": 1755.452,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 1,
+      "longest_no_change_streak": 1,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 14,
+        "committed_action_tickets": 14,
+        "precommitted_predictions": 13,
+        "scored_predictions": 13,
+        "prediction_action_coverage": 0.9285714285714286,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 1,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 13,
+          "matched": 2,
+          "mismatched": 11,
+          "match_rate": 0.15384615384615385
+        },
+        "within_scope_predictions": {
+          "scored": 13,
+          "matched": 2,
+          "mismatched": 11,
+          "match_rate": 0.15384615384615385
+        },
+        "boundary_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "all_boundary_actions": 0,
+        "changed_cell_predictions": {
+          "scored": 13,
+          "matched": 2,
+          "mismatched": 11,
+          "match_rate": 0.15384615384615385
+        },
+        "stationary_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "checked_cell_count": 30,
+        "predicted_changed_cell_count": 25,
+        "observed_changed_cell_count_on_scored_actions": 574,
+        "observed_changed_cells_checked": 24,
+        "observed_changed_cell_coverage_micro": 0.041811846689895474,
+        "stop_interventions": 12,
+        "stop_reasons": {
+          "prediction_mismatch": 11,
+          "prediction_required": 1
+        },
+        "rejected_attempts": 18,
+        "rejection_reasons": {
+          "prediction_precondition_failed": 7,
+          "prediction_invalid": 5,
+          "prediction_rule_contested": 6
+        },
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 12,
+        "revised_rule_versions": 8,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        }
+      },
+      "usage": {
+        "requests": 111,
+        "responses": 99,
+        "errors": 12,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 12
+        },
+        "provider_error_http_status": {
+          "None": 12
+        },
+        "latency_completed_requests_n": 111,
+        "latency_median_seconds": 8.829898013000275,
+        "latency_p95_seconds": 52.39633390899962,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2315610,
+          "completion_tokens_including_reasoning": 43448,
+          "reasoning_tokens": 22442,
+          "cached_input_tokens": 1446144,
+          "total_tokens": 2359058,
+          "uncached_input_tokens": 869466
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2315610,
+          "completion_tokens_including_reasoning": 43448,
+          "reasoning_tokens": 22442,
+          "cached_input_tokens": 1446144,
+          "total_tokens": 2359058,
+          "uncached_input_tokens": 869466
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 99,
+          "completion_tokens_including_reasoning": 99,
+          "reasoning_tokens": 99,
+          "cached_input_tokens": 99,
+          "total_tokens": 99,
+          "uncached_input_tokens": 99
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 111,
+        "distinct_injected_prediction_ids": 14,
+        "provider_error_codes": {
+          "None": 12
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 99,
+        "tool_error_text_results": 2,
+        "tool_error_text_classes": {
+          "KeyError": 2
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-3-baseline",
+      "arm": "baseline",
+      "replicate": 2,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 0,
+      "first_level_actions_to_success": null,
+      "full_game_success": 0,
+      "levels_completed": 0,
+      "score_cap_1_15": 0.0,
+      "raw_benchmark_score": 0.0,
+      "benchmark_recomputed_score": 0.0,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        48
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 48,
+          "max_levels": 0,
+          "end_action": 48,
+          "end_levels": 0
+        }
+      ],
+      "actions": 48,
+      "elapsed_seconds": 1756.526,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 5,
+      "longest_no_change_streak": 2,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 48,
+        "committed_action_tickets": 0,
+        "precommitted_predictions": 0,
+        "scored_predictions": 0,
+        "prediction_action_coverage": 0.0,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 0,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "within_scope_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "boundary_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "all_boundary_actions": 0,
+        "changed_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "stationary_cell_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        },
+        "checked_cell_count": null,
+        "predicted_changed_cell_count": null,
+        "observed_changed_cell_count_on_scored_actions": null,
+        "observed_changed_cells_checked": null,
+        "observed_changed_cell_coverage_micro": null,
+        "stop_interventions": 0,
+        "stop_reasons": {},
+        "rejected_attempts": 0,
+        "rejection_reasons": {},
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 0,
+        "revised_rule_versions": 0,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 0,
+          "matched": 0,
+          "mismatched": 0,
+          "match_rate": null
+        }
+      },
+      "usage": {
+        "requests": 100,
+        "responses": 88,
+        "errors": 12,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 11,
+          "HTTPError": 1
+        },
+        "provider_error_http_status": {
+          "None": 11,
+          "500": 1
+        },
+        "latency_completed_requests_n": 100,
+        "latency_median_seconds": 10.234786128999986,
+        "latency_p95_seconds": 48.1394430499995,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2326262,
+          "completion_tokens_including_reasoning": 31104,
+          "reasoning_tokens": 14431,
+          "cached_input_tokens": 1842496,
+          "total_tokens": 2357366,
+          "uncached_input_tokens": 483766
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2326262,
+          "completion_tokens_including_reasoning": 31104,
+          "reasoning_tokens": 14431,
+          "cached_input_tokens": 1842496,
+          "total_tokens": 2357366,
+          "uncached_input_tokens": 483766
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 88,
+          "completion_tokens_including_reasoning": 88,
+          "reasoning_tokens": 88,
+          "cached_input_tokens": 88,
+          "total_tokens": 88,
+          "uncached_input_tokens": 88
+        },
+        "belief_fact_injection_requests": 0,
+        "belief_fact_injection_rate": 0.0,
+        "distinct_injected_evidence_ids": 0,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 0,
+        "distinct_injected_prediction_ids": 0,
+        "provider_error_codes": {
+          "None": 11,
+          "1234": 1
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 88,
+        "tool_error_text_results": 2,
+        "tool_error_text_classes": {
+          "ImportError": 1,
+          "NameError": 1
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    },
+    {
+      "slot": "r2-4-combined",
+      "arm": "combined",
+      "replicate": 2,
+      "status": "completed",
+      "finished": true,
+      "first_level_success": 1,
+      "first_level_actions_to_success": 13,
+      "full_game_success": 0,
+      "levels_completed": 1,
+      "score_cap_1_15": 3.5714285714285716,
+      "raw_benchmark_score": 3.571428571428571,
+      "benchmark_recomputed_score": 3.5714285714285716,
+      "benchmark_covers_all_events": true,
+      "actions_per_level_all_resets": [
+        13,
+        9
+      ],
+      "reset_segments": [
+        {
+          "start_action": 1,
+          "actions": 22,
+          "max_levels": 1,
+          "end_action": 22,
+          "end_levels": 1
+        }
+      ],
+      "actions": 22,
+      "elapsed_seconds": 1754.499,
+      "game_outcome": "cancelled",
+      "within_time_limit": true,
+      "no_change_actions": 0,
+      "longest_no_change_streak": 0,
+      "effective_solver_seconds": 1740,
+      "prediction": {
+        "actual_actions": 22,
+        "committed_action_tickets": 22,
+        "precommitted_predictions": 22,
+        "scored_predictions": 22,
+        "prediction_action_coverage": 1.0,
+        "predicted_commitments_without_action": 0,
+        "unpredicted_actions": 0,
+        "invalid_commitment_actions": 0,
+        "all_predictions": {
+          "scored": 22,
+          "matched": 20,
+          "mismatched": 2,
+          "match_rate": 0.9090909090909091
+        },
+        "within_scope_predictions": {
+          "scored": 21,
+          "matched": 20,
+          "mismatched": 1,
+          "match_rate": 0.9523809523809523
+        },
+        "boundary_predictions": {
+          "scored": 1,
+          "matched": 0,
+          "mismatched": 1,
+          "match_rate": 0.0
+        },
+        "all_boundary_actions": 1,
+        "changed_cell_predictions": {
+          "scored": 17,
+          "matched": 16,
+          "mismatched": 1,
+          "match_rate": 0.9411764705882353
+        },
+        "stationary_cell_predictions": {
+          "scored": 5,
+          "matched": 4,
+          "mismatched": 1,
+          "match_rate": 0.8
+        },
+        "checked_cell_count": 25,
+        "predicted_changed_cell_count": 20,
+        "observed_changed_cell_count_on_scored_actions": 2425,
+        "observed_changed_cells_checked": 21,
+        "observed_changed_cell_coverage_micro": 0.00865979381443299,
+        "stop_interventions": 2,
+        "stop_reasons": {
+          "prediction_mismatch": 2
+        },
+        "rejected_attempts": 17,
+        "rejection_reasons": {
+          "prediction_precondition_failed": 14,
+          "prediction_invalid": 2,
+          "prediction_rule_contested": 1
+        },
+        "dependency_invalidations": 0,
+        "declared_rule_versions": 6,
+        "revised_rule_versions": 3,
+        "revised_after_mismatch_later_predictions": {
+          "scored": 3,
+          "matched": 3,
+          "mismatched": 0,
+          "match_rate": 1.0
+        }
+      },
+      "usage": {
+        "requests": 116,
+        "responses": 102,
+        "errors": 14,
+        "unfinished_requests": 0,
+        "provider_error_types": {
+          "ReadTimeout": 14
+        },
+        "provider_error_http_status": {
+          "None": 14
+        },
+        "latency_completed_requests_n": 116,
+        "latency_median_seconds": 9.068119963999834,
+        "latency_p95_seconds": 42.81512307200046,
+        "latency_missing_terminal_records": 0,
+        "tokens_all_observed_responses": {
+          "prompt_tokens": 2771141,
+          "completion_tokens_including_reasoning": 35245,
+          "reasoning_tokens": 16391,
+          "cached_input_tokens": 2255744,
+          "total_tokens": 2806386,
+          "uncached_input_tokens": 515397
+        },
+        "tokens_known_field_subtotal": {
+          "prompt_tokens": 2771141,
+          "completion_tokens_including_reasoning": 35245,
+          "reasoning_tokens": 16391,
+          "cached_input_tokens": 2255744,
+          "total_tokens": 2806386,
+          "uncached_input_tokens": 515397
+        },
+        "token_field_response_coverage": {
+          "prompt_tokens": 102,
+          "completion_tokens_including_reasoning": 102,
+          "reasoning_tokens": 102,
+          "cached_input_tokens": 102,
+          "total_tokens": 102,
+          "uncached_input_tokens": 102
+        },
+        "belief_fact_injection_requests": 110,
+        "belief_fact_injection_rate": 0.9482758620689655,
+        "distinct_injected_evidence_ids": 22,
+        "request_model_settings": [
+          {
+            "model": "glm-5.3-flash",
+            "provider": "bigmodel",
+            "reasoning_effort": "low",
+            "max_output_tokens": 8192
+          }
+        ],
+        "prediction_state_injection_requests": 116,
+        "distinct_injected_prediction_ids": 22,
+        "provider_error_codes": {
+          "None": 14
+        },
+        "api_failure_limit_hits": 0
+      },
+      "tools": {
+        "tool_result_sections": 102,
+        "tool_error_text_results": 4,
+        "tool_error_text_classes": {
+          "AttributeError": 1,
+          "NameError": 2,
+          "ValueError": 1
+        },
+        "transcript_files": 1
+      },
+      "assignment_observations_match": true,
+      "protocol_observation_flags": [],
+      "artifact_warnings": []
+    }
+  ],
+  "arms_itt": {
+    "baseline": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "mean_levels_completed": 0,
+      "mean_full_game_success": 0,
+      "mean_first_level_success": 0,
+      "mean_score_cap_1_15": 0.0,
+      "mean_actions": 98.5,
+      "mean_elapsed_seconds": 1756.5430000000001,
+      "scored_predictions": 0,
+      "precommitted_predictions": 0,
+      "stop_interventions": 0,
+      "rejected_attempts": 0,
+      "prediction_match_rate_micro": null,
+      "provider_errors": 17
+    },
+    "belief": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "mean_levels_completed": 1,
+      "mean_full_game_success": 0,
+      "mean_first_level_success": 1,
+      "mean_score_cap_1_15": 0.13237644714190341,
+      "mean_actions": 210,
+      "mean_elapsed_seconds": 1754.708,
+      "scored_predictions": 0,
+      "precommitted_predictions": 0,
+      "stop_interventions": 0,
+      "rejected_attempts": 0,
+      "prediction_match_rate_micro": null,
+      "provider_errors": 15
+    },
+    "prediction": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "mean_levels_completed": 0.5,
+      "mean_full_game_success": 0,
+      "mean_first_level_success": 0.5,
+      "mean_score_cap_1_15": 1.7857142857142858,
+      "mean_actions": 31.5,
+      "mean_elapsed_seconds": 1754.7089999999998,
+      "scored_predictions": 61,
+      "precommitted_predictions": 61,
+      "stop_interventions": 27,
+      "rejected_attempts": 46,
+      "prediction_match_rate_micro": 0.5901639344262295,
+      "provider_errors": 22
+    },
+    "combined": {
+      "assigned_n": 2,
+      "finished_n": 2,
+      "mean_levels_completed": 0.5,
+      "mean_full_game_success": 0,
+      "mean_first_level_success": 0.5,
+      "mean_score_cap_1_15": 1.7857142857142858,
+      "mean_actions": 18,
+      "mean_elapsed_seconds": 1754.2065,
+      "scored_predictions": 34,
+      "precommitted_predictions": 34,
+      "stop_interventions": 11,
+      "rejected_attempts": 39,
+      "prediction_match_rate_micro": 0.7352941176470589,
+      "provider_errors": 28
+    }
+  },
+  "descriptive_factorial_effects": {
+    "mean_levels_completed": {
+      "prediction_main": 0.0,
+      "belief_main": 0.5,
+      "interaction": -1.0
+    },
+    "mean_full_game_success": {
+      "prediction_main": 0.0,
+      "belief_main": 0.0,
+      "interaction": 0
+    },
+    "mean_score_cap_1_15": {
+      "prediction_main": 1.7195260621433341,
+      "belief_main": 0.06618822357095167,
+      "interaction": -0.13237644714190341
+    }
+  },
+  "all_usage": {
+    "requests": 925,
+    "responses": 843,
+    "errors": 82,
+    "unfinished_requests": 0,
+    "provider_error_types": {
+      "ReadTimeout": 80,
+      "HTTPError": 2
+    },
+    "provider_error_http_status": {
+      "None": 80,
+      "429": 1,
+      "500": 1
+    },
+    "latency_completed_requests_n": 925,
+    "latency_median_seconds": 8.206365837000703,
+    "latency_p95_seconds": 42.81512307200046,
+    "latency_missing_terminal_records": 0,
+    "tokens_all_observed_responses": {
+      "prompt_tokens": 22502042,
+      "completion_tokens_including_reasoning": 281235,
+      "reasoning_tokens": 140143,
+      "cached_input_tokens": 14067264,
+      "total_tokens": 22783277,
+      "uncached_input_tokens": 8434778
+    },
+    "tokens_known_field_subtotal": {
+      "prompt_tokens": 22502042,
+      "completion_tokens_including_reasoning": 281235,
+      "reasoning_tokens": 140143,
+      "cached_input_tokens": 14067264,
+      "total_tokens": 22783277,
+      "uncached_input_tokens": 8434778
+    },
+    "token_field_response_coverage": {
+      "prompt_tokens": 843,
+      "completion_tokens_including_reasoning": 843,
+      "reasoning_tokens": 843,
+      "cached_input_tokens": 843,
+      "total_tokens": 843,
+      "uncached_input_tokens": 843
+    },
+    "belief_fact_injection_requests": 438,
+    "belief_fact_injection_rate": 0.4735135135135135,
+    "distinct_injected_evidence_ids": 357,
+    "request_model_settings": [
+      {
+        "model": "glm-5.3-flash",
+        "provider": "bigmodel",
+        "reasoning_effort": "low",
+        "max_output_tokens": 8192
+      }
+    ],
+    "prediction_state_injection_requests": 489,
+    "distinct_injected_prediction_ids": 95,
+    "provider_error_codes": {
+      "None": 80,
+      "1305": 1,
+      "1234": 1
+    },
+    "api_failure_limit_hits": 0
+  },
+  "warnings": []
+}

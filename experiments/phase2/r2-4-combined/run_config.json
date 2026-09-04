@@ -1,0 +1,71 @@
+{
+  "agent": "duck-harness",
+  "analyzer_timeout_seconds": 90.0,
+  "competition_arcade": {
+    "clone_runs": null,
+    "simulated": false
+  },
+  "concurrent_jobs": 1,
+  "concurrent_jobs_scope": "total",
+  "dataset": "",
+  "deployment": {
+    "kaggle": {
+      "accelerator": "NvidiaRtxPro6000",
+      "additional_dataset_sources": [],
+      "cpu_only": false,
+      "dataset_ref": null,
+      "dry_run": false,
+      "duck_public_harness": false,
+      "enable_internet": false,
+      "kernel_slug": "taaf-duck-harness",
+      "kernel_title": "taaf-duck-harness",
+      "make_share_version": false,
+      "public": false,
+      "run_as_submission": false
+    },
+    "slurm": {
+      "extra_sbatch_flags": [],
+      "gpu": "B200",
+      "gpu_count": 1,
+      "image": null,
+      "local_server_api_key_file": null,
+      "local_server_base_port": null,
+      "local_server_config": null,
+      "local_server_count": 0,
+      "local_server_repo_dir": null,
+      "local_server_tensor_parallel_size": null,
+      "nodelist": null,
+      "partition": null,
+      "start_local_server": false,
+      "time": "06:00:00"
+    },
+    "source_repos": [],
+    "target": "inline",
+    "wait": true
+  },
+  "effective_concurrent_jobs": 1,
+  "environments_dir": null,
+  "exclude_tags": [],
+  "experiments_dir": null,
+  "game_count": 1,
+  "game_run_count": 1,
+  "games": [
+    "ls20-9607627b"
+  ],
+  "generated_at": "2026-09-04T11:46:46.608953Z",
+  "include_tags": [],
+  "live_arcade": true,
+  "max_actions": 1200,
+  "max_experiment_runtime_hours": null,
+  "max_experiment_runtime_minutes": null,
+  "max_runtime_minutes_per_game": 29.0,
+  "max_runtime_minutes_per_game_source": "explicit",
+  "model": "glm-5.3-flash",
+  "n_passes": 1,
+  "pass_schedule": [
+    0
+  ],
+  "runner": "taaf",
+  "version": 2,
+  "wave_count": 1
+}
