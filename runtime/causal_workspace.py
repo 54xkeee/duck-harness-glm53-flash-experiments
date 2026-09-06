@@ -22,7 +22,9 @@ def fingerprint(value):
 
 def render_receipt(receipt, payload, limit):
     """Reserve the factual envelope before budgeting any untrusted output."""
-    out = {"HOST_RECEIPT": deepcopy(receipt), **deepcopy(payload)}
+    # The child may return NaN/Infinity; keep display data from breaking receipts.
+    display = json.loads(json.dumps(payload, default=str), parse_constant=str)
+    out = {"HOST_RECEIPT": deepcopy(receipt), **display}
     for field in ("result", "stdout", "error"):
         if len(canonical(out)) <= limit:
             break

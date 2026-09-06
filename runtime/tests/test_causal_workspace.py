@@ -170,6 +170,11 @@ class WorkspaceTests(unittest.TestCase):
         self.assertLessEqual(len(rendered), 512)
         self.assertEqual(json.loads(rendered)["HOST_RECEIPT"], self.host.receipt)
 
+    def test_nonfinite_model_result_cannot_break_receipt(self):
+        rendered = ccw.render_receipt(self.host.receipt, {"result": float("nan")}, 512)
+        self.assertEqual(json.loads(rendered)["result"], "NaN")
+        self.assertEqual(json.loads(rendered)["HOST_RECEIPT"], self.host.receipt)
+
 
 if __name__ == "__main__":
     unittest.main()

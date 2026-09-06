@@ -105,3 +105,10 @@ def test_action_aliases_share_dead_action_identity(tmp_path):
         output = agent._run_python_tool(value.state_path, {"code": f"action('{action}')"})
     assert len(value.game.game_run.history) == 2
     assert json.loads(output.content)["HOST_RECEIPT"]["stop_reason"] == "dead_action_suppressed"
+
+
+def test_nonfinite_child_result_keeps_real_receipt(tmp_path):
+    value = session(tmp_path, [frame(1), frame(2)], enabled=False)
+    output = agent_for(value)._run_python_tool(value.state_path, {"code": "action('RIGHT'); result=float('nan')"})
+    assert json.loads(output.content)["HOST_RECEIPT"]["executed"] == 1
+    assert json.loads(output.content)["result"] == "NaN"
