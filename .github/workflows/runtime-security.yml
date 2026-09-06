@@ -31,6 +31,7 @@ jobs:
         run: |
           /usr/bin/python3 runtime/build_runtime.py --verify-frozen
           /usr/bin/python3 tools/verify_archive.py
+          /usr/bin/python3 runtime/tests/test_causal_workspace.py
       - name: Install hash-locked host test dependencies
         run: |
           /usr/bin/python3 -m venv "$RUNNER_TEMP/duck-test-env"
@@ -43,6 +44,8 @@ jobs:
           /usr/bin/python3 runtime/build_runtime.py "$RUNNER_TEMP/duck-live"
           export PYTHONPATH="$RUNNER_TEMP/duck-live/ARC3-Inference:$RUNNER_TEMP/duck-live/tufa-arc-agi-framework/src"
           "$RUNNER_TEMP/duck-test-env/bin/python" -m pytest -q -p no:cacheprovider "$RUNNER_TEMP/duck-live/ARC3-Inference/tests/test_prediction_io.py"
+          export PYTHONPATH="$PYTHONPATH:$RUNNER_TEMP/duck-live/ARC3-Inference/tests"
+          "$RUNNER_TEMP/duck-test-env/bin/python" -m pytest -q -p no:cacheprovider runtime/tests/test_workspace_integration.py
           "$RUNNER_TEMP/duck-test-env/bin/python" -m inference.framework.run --help
       - name: Audit installed host test dependency versions
         run: |

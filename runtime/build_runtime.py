@@ -7,12 +7,17 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import shutil
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
+_spec = importlib.util.spec_from_file_location("integrate_workspace", ROOT / "runtime/integrate_workspace.py")
+_integration = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_integration)
+integrate = _integration.integrate
 FROZEN_COMMIT = "9e104b3df810b81925c414ebb1ebc7a0edade61e"
 
 
@@ -51,6 +56,9 @@ def build(destination: Path) -> Path:
         app = staged / "ARC3-Inference"
         agent = app / "inference/agent"
         shutil.copy2(ROOT / "code/post-experiment/ARC3-Inference/inference/agent/tool_agent.py", agent)
+        tool_agent = agent / "tool_agent.py"
+        tool_agent.write_text(integrate(tool_agent.read_text(encoding="utf-8")), encoding="utf-8")
+        shutil.copy2(ROOT / "runtime/causal_workspace.py", agent)
         for filename in ("python_tool_sandbox.py", "linux_isolation.py"):
             shutil.copy2(ROOT / "runtime" / filename, agent / filename)
         tests = app / "tests"
@@ -59,6 +67,9 @@ def build(destination: Path) -> Path:
         (staged / "RUNTIME_PROVENANCE.json").write_text(json.dumps({
             "frozen_commit": FROZEN_COMMIT,
             "base": "code/frozen-phase2", "feedback_fix": "code/post-experiment",
+            "upstream_head_checked": "7652836056c59e044f093e3c13ed7438c814169e",
+            "workspace_overlay": {name: hashlib.sha256((ROOT / "runtime" / name).read_bytes()).hexdigest()
+                                  for name in ("causal_workspace.py", "integrate_workspace.py")},
             "isolation_overlay": {name: hashlib.sha256((ROOT / "runtime" / name).read_bytes()).hexdigest()
                                   for name in ("python_tool_sandbox.py", "linux_isolation.py")},
             "game_performance": "Not re-evaluated; historical scores do not describe this runtime.",
