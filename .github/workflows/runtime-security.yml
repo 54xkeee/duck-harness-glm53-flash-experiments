@@ -21,6 +21,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y bubblewrap libseccomp2 python3-venv
           /usr/bin/bwrap --version
+      - name: Check fixed isolation startup and report prerequisite errors
+        run: /usr/bin/python3 runtime/check_environment.py
       - name: Verify frozen evidence and archive
         run: |
           /usr/bin/python3 runtime/build_runtime.py --verify-frozen

@@ -15,6 +15,7 @@
 ```bash
 sudo apt-get update
 sudo apt-get install bubblewrap libseccomp2 python3-venv
+/usr/bin/python3 runtime/check_environment.py
 /usr/bin/python3 runtime/build_runtime.py --verify-frozen
 /usr/bin/python3 runtime/build_runtime.py /tmp/duck-live
 
