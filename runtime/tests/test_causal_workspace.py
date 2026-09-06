@@ -107,12 +107,20 @@ class WorkspaceTests(unittest.TestCase):
     def test_scope_preserves_only_game_priors(self):
         self.host.update({"game": {"controls": "hypothesis"}, "level": {"map": 1},
                           "episode": {"plan": "right"}, "rules": [self.rule()]})
+        self.host.execute([{"action": "RIGHT"}], self.move)
         self.set_frame(0, level=2)
         self.host.sync_scope()
         self.assertTrue(self.host.workspace["game"])
         self.assertFalse(self.host.workspace["level"])
         self.assertFalse(self.host.workspace["episode"])
         self.assertEqual(next(iter(self.host.workspace["rules"].values()))["status"], "prior")
+        self.assertFalse(self.host.digest()["evidence"])
+
+    def test_later_invalid_option_preserves_first_stop_reason(self):
+        self.host.execute([{"action": "RIGHT"}], self.noop)
+        self.host.execute([{"action": "RIGHT", "expected": {"bad": 1}}], self.move)
+        self.assertEqual(self.host.receipt["stop_reason"], "no_effect")
+        self.assertEqual(self.calls, 1)
 
     def test_rejected_action_is_not_a_transition(self):
         self.host.execute([{"action": "RIGHT"}], lambda _: {"executed": False, "stop_reason": "budget"})

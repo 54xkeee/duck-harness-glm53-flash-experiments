@@ -130,6 +130,7 @@ class CausalWorkspace:
         if record["type"] == "scope":
             self.scope = record["scope"]
             self.dead.clear()
+            self.recent.clear()
         elif record["type"] == "transition":
             self.last_action = record["action"]
             self.recent = (self.recent + [record])[-4:]
@@ -223,7 +224,7 @@ class CausalWorkspace:
                     if item["action"] != rule["spec"]["action"]:
                         raise ValueError("action differs from referenced rule")
         except (ValueError, TypeError):
-            self.stopped = "invalid_option"
+            self.stopped = self.stopped or "invalid_option"
         for item in actions:
             if self.stopped:
                 break
@@ -246,6 +247,9 @@ class CausalWorkspace:
                 self.append("error", reason=self.stopped)
                 raise
             if not isinstance(last, dict):
+                self.stopped = "host_callback_error_outcome_unknown"
+                self.receipt["stop_reason"] = self.stopped
+                self.append("error", reason=self.stopped)
                 raise ValueError("host callback returned no result")
             after = self.frame()
             if not last.get("executed"):
