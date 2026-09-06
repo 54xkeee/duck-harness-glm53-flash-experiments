@@ -1,0 +1,12 @@
+# Host-only offline integration tests. None of these packages enter the sandbox.
+arcengine==0.9.3
+arc-agi==0.9.9
+numpy==2.2.6
+matplotlib==3.10.6
+scipy==1.17.1
+imageio==2.37.3
+imageio-ffmpeg==0.6.0
+requests==2.34.2
+python-dotenv==1.2.2
+pytest==9.0.3
+kaggle==2.2.1

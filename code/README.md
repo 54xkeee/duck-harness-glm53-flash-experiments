@@ -2,6 +2,8 @@
 
 本目录是取证/理解用的实现资料，不是另一个完整部署发行版。上游是 [Tufalabs/duck-harness](https://github.com/Tufalabs/duck-harness)，原有声明保留，没有重新指定上游许可证。
 
+**冻结 Python 执行器有已知隔离缺口，仅作历史取证。** 需要运行时使用仓库根目录的 [加固运行入口](../runtime/README.md)，它构建独立目录而不改本目录中的快照；详见 [安全边界](../SECURITY.md)。
+
 ## 版本边界
 
 - `frozen-phase1/`：第一轮启动时本地保存的快照，覆盖范围小于第二轮。

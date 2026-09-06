@@ -1,0 +1,10 @@
+# Application-specific userns prerequisite, not the sandbox filesystem policy.
+# Only this root-owned copy of the distribution bwrap gets the exception.
+# Global AppArmor/userns restrictions stay enabled. The child remains restricted
+# by mandatory namespaces, dropped capabilities, seccomp and hard resource limits.
+abi <abi/4.0>,
+include <tunables/global>
+
+profile duck-bwrap /usr/local/libexec/duck-bwrap flags=(unconfined) {
+    userns,
+}

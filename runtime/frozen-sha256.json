@@ -1,0 +1,662 @@
+[
+  {
+    "path": "MANIFEST.csv",
+    "sha256": "19798f8a60da11d3f0daee94c7b23e613efbc1fb6468243b2313b68be6d4f2d5"
+  },
+  {
+    "path": "background/provided-audit.md",
+    "sha256": "7f16c76d24194198b81d35091e78c536b331578a66420761311c10320374b60c"
+  },
+  {
+    "path": "code/frozen-phase1/inference/__init__.py",
+    "sha256": "d9244cc613220677e2c47b8cd5a218786b918a542bcba63682a3d0778006cf8a"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/__init__.py",
+    "sha256": "0c0a18c681d1f6c035848048af21405b36021f93bdd465e44896494454886813"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/action_names.py",
+    "sha256": "d359c22dd9f3925ed54cb05a60640e8aa1121c226a068b4736e8dfad46d2d115"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/evidence_controller.py",
+    "sha256": "c18745dca1641a9a5341896d2929d1975bfd8eeddde9ca55b9f974539ae4a130"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/prompts.py",
+    "sha256": "a8e203fbe288116a24f29f6880f0657873df51fee76b0af9ef2b44cc3d0186d3"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/python_tool_sandbox.py",
+    "sha256": "c546141221ede24b85c1d87e0160b5f1905650ab60f2eceb7140404810067786"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/runtime_state.py",
+    "sha256": "61905e5c64474c1b0b923afc90431a9a7774535235b142b2f21ba93684e303a2"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/tool_agent.py",
+    "sha256": "d924e8dce1eef2f54040ad6a63c5b7f342022e6b35ed85037a300fe46bc68467"
+  },
+  {
+    "path": "code/frozen-phase1/inference/agent/vision_context.py",
+    "sha256": "6538fa9a115799e249a705812cbb873563f7574b55cf18fc8d3119ee1a2f96ad"
+  },
+  {
+    "path": "code/frozen-phase1/inference/framework/__init__.py",
+    "sha256": "97c7fcfe9e5f8b109b90416413b052099ab628e8c1c6a8c888612b3074a1b6bf"
+  },
+  {
+    "path": "code/frozen-phase1/inference/framework/kaggle.py",
+    "sha256": "d600a993a8642a808fb83080be40bfc3fd9ababa6b84e15abba713e8e2d7ebbe"
+  },
+  {
+    "path": "code/frozen-phase1/inference/framework/run.py",
+    "sha256": "d83304240612f74e5ae2507e632951b40d4571fa22f0c9785fa00d504c0488f1"
+  },
+  {
+    "path": "code/frozen-phase1/inference/framework/solver.py",
+    "sha256": "29650fee54b8cae2fdfe9be276b0c425038aaefba01441d0cb16182fec921b2b"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/__init__.py",
+    "sha256": "36ac2d2804aa381c402ee585e9c45f3d58d9a8b3075510cdd772df2eec2ef889"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/chat.py",
+    "sha256": "f9ac5aa9459ef11161020b275e0af6595b255fc35a1f8d4966a505d955e4cd31"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/config_value.py",
+    "sha256": "a10980e5e708f68cfdef0d065a0907137d6f26749ab6f2ba5f7135421847a5c6"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/eval.py",
+    "sha256": "bc8634bd3dd81af04e6d45e64a4a316db5bf9f6dcc7ed34a8281ada2a029ef52"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/eval_plot.py",
+    "sha256": "2e8a426161a230eb748bcc1db30ed2605c16351f6f5a51e77cae8d1cc19124f3"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/significance.py",
+    "sha256": "29790dec9415820a074e3481df307b7461d04a95e6c5fe3dce41af49c2629a93"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/traces.py",
+    "sha256": "b2a8954502606aebbba2af41fea2956d7e01fa0f48cc8e9b52b95c7152c1177c"
+  },
+  {
+    "path": "code/frozen-phase1/inference/tools/vllm_runtime_lora_guard.py",
+    "sha256": "a5c3e4a06b8706d9c0f05f28d7395ae93e90c6774fbe2e15194e69536f6b6e2e"
+  },
+  {
+    "path": "code/frozen-phase1/inference/utils/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "code/frozen-phase1/inference/utils/grid_utils.py",
+    "sha256": "2c96de5a6e0da2ae0390ab191b39a154784089b00fce8e2da98ebb3960715b67"
+  },
+  {
+    "path": "code/frozen-phase1/inference/utils/openai_compat.py",
+    "sha256": "47b1076457320c01af712d746125807b7e1c0701b38cad8cd1b2f9601fd170d7"
+  },
+  {
+    "path": "code/frozen-phase1/inference/utils/run_artifacts.py",
+    "sha256": "4f13083ae6c502eba80d9496e2ca620222da861e77204c21dae5e8164df0be6c"
+  },
+  {
+    "path": "code/frozen-phase1/inference/utils/segmentation.py",
+    "sha256": "e9499bd859b4488455b481d3f0577a2c59feba9f78b92f20befc5d294ee09ee0"
+  },
+  {
+    "path": "code/frozen-phase1/inference/utils/viewer_artifacts.py",
+    "sha256": "21f948f7398bdc16b8eaf9771edf0a3c6505349794c9c44154870b075f07a52f"
+  },
+  {
+    "path": "code/frozen-phase1/run_verified_experiment.py",
+    "sha256": "b821834559dc2505772889126debe8462cce409eb20d75d0bc23a7cf01cc88aa"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/__init__.py",
+    "sha256": "d9244cc613220677e2c47b8cd5a218786b918a542bcba63682a3d0778006cf8a"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/__init__.py",
+    "sha256": "0c0a18c681d1f6c035848048af21405b36021f93bdd465e44896494454886813"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/action_names.py",
+    "sha256": "d359c22dd9f3925ed54cb05a60640e8aa1121c226a068b4736e8dfad46d2d115"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/evidence_controller.py",
+    "sha256": "c18745dca1641a9a5341896d2929d1975bfd8eeddde9ca55b9f974539ae4a130"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/prediction_controller.py",
+    "sha256": "374c8f2863567d84ab5b7f34eddf97d0f5684ed60e25979ce8a538c8c6412c76"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/prompts.py",
+    "sha256": "a8e203fbe288116a24f29f6880f0657873df51fee76b0af9ef2b44cc3d0186d3"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/python_tool_sandbox.py",
+    "sha256": "9f2a1168d748ad26c0a55dec4f8aa09bf0a6fc592524829934c9276afa61d933"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/runtime_state.py",
+    "sha256": "ac1de559b8e3289ba671a7e446e7792b1ce9cffab5a1c21d3dc0b980e1008a38"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/tool_agent.py",
+    "sha256": "7f64dacc0836613f9d8509d51bd88d62faf00b1221d11165ab40f9501f9b0dad"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/agent/vision_context.py",
+    "sha256": "6538fa9a115799e249a705812cbb873563f7574b55cf18fc8d3119ee1a2f96ad"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/framework/__init__.py",
+    "sha256": "97c7fcfe9e5f8b109b90416413b052099ab628e8c1c6a8c888612b3074a1b6bf"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/framework/kaggle.py",
+    "sha256": "d600a993a8642a808fb83080be40bfc3fd9ababa6b84e15abba713e8e2d7ebbe"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/framework/run.py",
+    "sha256": "d83304240612f74e5ae2507e632951b40d4571fa22f0c9785fa00d504c0488f1"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/framework/solver.py",
+    "sha256": "2ea704865cf3bbfc17d39389de758ef2adedb98123ea7fd62700104ee53cdd4e"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/__init__.py",
+    "sha256": "36ac2d2804aa381c402ee585e9c45f3d58d9a8b3075510cdd772df2eec2ef889"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/chat.py",
+    "sha256": "f9ac5aa9459ef11161020b275e0af6595b255fc35a1f8d4966a505d955e4cd31"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/config_value.py",
+    "sha256": "a10980e5e708f68cfdef0d065a0907137d6f26749ab6f2ba5f7135421847a5c6"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/eval.py",
+    "sha256": "bc8634bd3dd81af04e6d45e64a4a316db5bf9f6dcc7ed34a8281ada2a029ef52"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/eval_plot.py",
+    "sha256": "2e8a426161a230eb748bcc1db30ed2605c16351f6f5a51e77cae8d1cc19124f3"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/significance.py",
+    "sha256": "29790dec9415820a074e3481df307b7461d04a95e6c5fe3dce41af49c2629a93"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/traces.py",
+    "sha256": "b2a8954502606aebbba2af41fea2956d7e01fa0f48cc8e9b52b95c7152c1177c"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/tools/vllm_runtime_lora_guard.py",
+    "sha256": "a5c3e4a06b8706d9c0f05f28d7395ae93e90c6774fbe2e15194e69536f6b6e2e"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/utils/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/utils/grid_utils.py",
+    "sha256": "2c96de5a6e0da2ae0390ab191b39a154784089b00fce8e2da98ebb3960715b67"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/utils/openai_compat.py",
+    "sha256": "47b1076457320c01af712d746125807b7e1c0701b38cad8cd1b2f9601fd170d7"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/utils/run_artifacts.py",
+    "sha256": "4f13083ae6c502eba80d9496e2ca620222da861e77204c21dae5e8164df0be6c"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/utils/segmentation.py",
+    "sha256": "e9499bd859b4488455b481d3f0577a2c59feba9f78b92f20befc5d294ee09ee0"
+  },
+  {
+    "path": "code/frozen-phase2/ARC3-Inference/inference/utils/viewer_artifacts.py",
+    "sha256": "21f948f7398bdc16b8eaf9771edf0a3c6505349794c9c44154870b075f07a52f"
+  },
+  {
+    "path": "code/frozen-phase2/local/PREDICTION_EXPERIMENT.md",
+    "sha256": "8b6074f3fe1436d1abd893f6534015d5d79948e29be2d4465667ad0a55bcdeb6"
+  },
+  {
+    "path": "code/frozen-phase2/local/analyze_prediction_experiment.py",
+    "sha256": "69ccb6a5fe6aa5e84d5b52c4962cfe1076bd9d488663ccc42644c9b7a89a70ee"
+  },
+  {
+    "path": "code/frozen-phase2/local/analyze_verified_experiment.py",
+    "sha256": "8f282ffd5b7d3ffc477794023fb1feb639ab422001d24ac2bf272de6df2339f8"
+  },
+  {
+    "path": "code/frozen-phase2/local/run_prediction_experiment.py",
+    "sha256": "241db3dd7b25f2ab33f3055ee5e536a18adeec256ee8e1d0ad92c2efe6d0545b"
+  },
+  {
+    "path": "code/frozen-phase2/local/run_verified_experiment.py",
+    "sha256": "b821834559dc2505772889126debe8462cce409eb20d75d0bc23a7cf01cc88aa"
+  },
+  {
+    "path": "code/frozen-phase2/local/test_prediction_experiment.py",
+    "sha256": "cc7289ae29c3095725272830fe6a1f1c645b606a448440636ed49957002e5cac"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/__init__.py",
+    "sha256": "f7f02949ee64cdaf6d1b0ae83f2096ace20acdc40fd3cacb4efd2f312101cedc"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/benchmark.py",
+    "sha256": "d273e8056f83a3d1557d31c50c9716ed205258c8b1ba31747367a743d51c9497"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/competition_arcade.py",
+    "sha256": "f3da6788117fa26b278ba9bc58d98b086843e6391ff58a1aed7a0384aa3c07fd"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/deploy.py",
+    "sha256": "2fb75c23fbb5008f794b13ee8a50f8368a04ec26ca037c93864713051f0b65c9"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/deploy_inline.py",
+    "sha256": "e21e43e0457b4a5d140b3be3953c98afbf358a33d0b713cfba5b0276f4631a31"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/deploy_kaggle.py",
+    "sha256": "649deb194aea3365fc68130b7ab43e6cb35a8d71031e3e4b7ea8aa4ec3ca150f"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/deploy_slurm.py",
+    "sha256": "53f784806aa68a0883f2a741781bab2c43e47f9b5b4169e781b31888ef034edf"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/diagnostics.py",
+    "sha256": "b78e534f2a0f54eb92cae430106773f60f968eda5c8ac17791b511732642b6eb"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/game.py",
+    "sha256": "8609e0646e96616decc936daf4bff102afd480beb69ef1e9e778cd2c1c7df225"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/game_api.py",
+    "sha256": "26b89933a9756501b3c269a4ebf492cac9455c78d7a7717e836294873eacf1b0"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/game_examples.py",
+    "sha256": "9d349f8dfd5a9842a5e71d084a9e0b38aeaa4de29a4d5977da5bb8ddabd935f5"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/kaggle_random.py",
+    "sha256": "26739fbac70efdf527f5d81e0f878ffeb4ed734540f0de872daefee07042d5c1"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/solver.py",
+    "sha256": "8c126b6e762768ef5ee51e8a6b7bac2153d7f24a262f6d16a9e472817232d64f"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/solver_examples.py",
+    "sha256": "1b6b47956c0e5ec9bdfda7f35d9b1f3e7a4834041ca1fc3c16a2586ac9d6b9d4"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/standard_benchmarks.py",
+    "sha256": "de199e127fc51beaaf5cbd7d76a032c90817400b016b2e0841b5a8d5ab81eee5"
+  },
+  {
+    "path": "code/frozen-phase2/tufa-arc-agi-framework/src/taaf/support.py",
+    "sha256": "4c41b13970867b745124ef43ffeec41481eb61ab25a73e225fca3d03b155bc7f"
+  },
+  {
+    "path": "code/post-experiment/ARC3-Inference/inference/agent/tool_agent.py",
+    "sha256": "e85a97310257957ab5fdd6e75fdb163225d17c51f035f37447e320478f1991f1"
+  },
+  {
+    "path": "code/post-experiment/ARC3-Inference/tests/test_prediction_io.py",
+    "sha256": "3f28c285f555d12a8e22ae62675431aae7ed223324fd22640da28ac582c98a06"
+  },
+  {
+    "path": "code/post-experiment/feedback-fix.diff",
+    "sha256": "e371392b88c756e98330dfc1d8026c61ebd65d805b7c00ae5ca1bc043f3fcce7"
+  },
+  {
+    "path": "experiments/historical/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "e7d5d78536b23d5a2f3cbfe2ce3d71f25b8a8d4ab8bdea330f29c5d7cefa7cc7"
+  },
+  {
+    "path": "experiments/historical/benchmark.json",
+    "sha256": "282abead633c6e2d96bdcd60a6b2b6c1bb639968dd4a97e0918349ed2e86431e"
+  },
+  {
+    "path": "experiments/historical/run_config.json",
+    "sha256": "c1872e6efcff58ccaddad39253989b7b1803a4009a2682410cf876d1b8ec879c"
+  },
+  {
+    "path": "experiments/phase1/analysis.json",
+    "sha256": "cf8b11f046a21e7aa4bc7f45be94cb1c3c1a7c939ce5b38b6074eb7e35823d43"
+  },
+  {
+    "path": "experiments/phase1/analysis.md",
+    "sha256": "6200867e5921af8dadaefc0834c6c65a050b972838708ab653caae2f8582d8de"
+  },
+  {
+    "path": "experiments/phase1/r1-1-belief/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "05fa8822f8ed1e48ced3375085ee06ac59cf6ddc888b9629eb224cfa1215dcb1"
+  },
+  {
+    "path": "experiments/phase1/r1-1-belief/artifacts/usage.jsonl",
+    "sha256": "fb628ce3d37d223301be04d19426e461361dced5ee5995e7bd85657b1ca3096d"
+  },
+  {
+    "path": "experiments/phase1/r1-1-belief/benchmark.json",
+    "sha256": "8e1f314a39d497a5de25e3a894e3abe7b6f34a7c8eb6501e69787a848ce940a4"
+  },
+  {
+    "path": "experiments/phase1/r1-1-belief/run_config.json",
+    "sha256": "f7d9d78a45e9dcd59fd40d2fa2117e1bd80ecb0e155338d6f5ede8a9861b733d"
+  },
+  {
+    "path": "experiments/phase1/r1-2-probe/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "e559c44f1ea5aafd4f4b731da9bb278d28b29464961ebfa29c05841c883236ed"
+  },
+  {
+    "path": "experiments/phase1/r1-2-probe/artifacts/usage.jsonl",
+    "sha256": "0732eecfc310c93fe705fbd1f280d31cc6fbf9f784e47423be5229146702a255"
+  },
+  {
+    "path": "experiments/phase1/r1-2-probe/benchmark.json",
+    "sha256": "e3d08d9eb15c6245f9b88b5fef6526e3e0c768dd43784a561bd81f0d7d5cc7ea"
+  },
+  {
+    "path": "experiments/phase1/r1-2-probe/run_config.json",
+    "sha256": "9dd472cf583ce11d3ab42e74b20ca521a7018a32911786c7d74a3232cec6e64d"
+  },
+  {
+    "path": "experiments/phase1/r1-3-combined/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "dc6a1d537b904745f5a8cf926670147cb30de73d4e0a2f6d7223bf66e4a8da16"
+  },
+  {
+    "path": "experiments/phase1/r1-3-combined/artifacts/usage.jsonl",
+    "sha256": "bf8a9f36b77b7a13edec70cf8a34130c30fcd7305c616cb5e8643e8fc4caaadf"
+  },
+  {
+    "path": "experiments/phase1/r1-3-combined/benchmark.json",
+    "sha256": "31231199c3f78c5acd6e6c8420d4d9511f254131a990b22b842dc71cc45915c9"
+  },
+  {
+    "path": "experiments/phase1/r1-3-combined/run_config.json",
+    "sha256": "f35a8daa4addd86ded95e7e3a45355b0bc0ca28036556946384232bc7cf3e7b4"
+  },
+  {
+    "path": "experiments/phase1/r1-4-baseline/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "39b5dc431dce34409c453f46acf92a099d7fc5c1ddd458b63b0fe83aaacaef88"
+  },
+  {
+    "path": "experiments/phase1/r1-4-baseline/artifacts/usage.jsonl",
+    "sha256": "12a1755731cd9b75830c3d6a1812a3c45957dbfc226162ca87c801beb926472c"
+  },
+  {
+    "path": "experiments/phase1/r1-4-baseline/benchmark.json",
+    "sha256": "3688ca122ba566668fb63e708f0f17c32d07904912674d10f3ce0591e41538ac"
+  },
+  {
+    "path": "experiments/phase1/r1-4-baseline/run_config.json",
+    "sha256": "db7890304ebd132252ce206881ee2abd9e3abfa5c950a0462320a34d171b6275"
+  },
+  {
+    "path": "experiments/phase1/r2-1-probe/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "7e8a02886cbcf2d8aee9ce5ee46c8e52fbbcbf3a02e0c11908394f73869afd9e"
+  },
+  {
+    "path": "experiments/phase1/r2-1-probe/artifacts/usage.jsonl",
+    "sha256": "91c67a24bff5dcf04cbef94dfee56f9903a025db012ef69230b4ced6569fa411"
+  },
+  {
+    "path": "experiments/phase1/r2-1-probe/benchmark.json",
+    "sha256": "b26994c8b4b75f91147bd79feb8f908ab0481fb1c78cdf578b75b86310069647"
+  },
+  {
+    "path": "experiments/phase1/r2-1-probe/run_config.json",
+    "sha256": "167be5cd30df5b8fc2cf3c255bad2b64a2efe6c71486046c346493cc7e8b23ae"
+  },
+  {
+    "path": "experiments/phase1/r2-2-baseline/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "10c0b6e71f2aadc05fe7a4fb5abe8ac79f30bf91c5695861af96b463bfc70185"
+  },
+  {
+    "path": "experiments/phase1/r2-2-baseline/artifacts/usage.jsonl",
+    "sha256": "e5a3abb09b731849feff833450a86ead2c021ac7f00c87ad88e4e59b51847520"
+  },
+  {
+    "path": "experiments/phase1/r2-2-baseline/benchmark.json",
+    "sha256": "091ad49468410786ca340dcb03c882d31b211827a92de24bc4ba342abcb03bcf"
+  },
+  {
+    "path": "experiments/phase1/r2-2-baseline/run_config.json",
+    "sha256": "761253676159fbe16915550e3128c62c043935519ad8d4fa119a7af7fffaaa21"
+  },
+  {
+    "path": "experiments/phase1/r2-3-combined/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "23cf069992ace784e8424eef12e88a6b38b22ae8a8481757d5dbbc0b483c289b"
+  },
+  {
+    "path": "experiments/phase1/r2-3-combined/artifacts/usage.jsonl",
+    "sha256": "605bec2d4cac309344acf6279a40323dfb4ba8635979c988ed115bbdd44eb2ed"
+  },
+  {
+    "path": "experiments/phase1/r2-3-combined/benchmark.json",
+    "sha256": "1d825b93445e1f200bdc776a269b0687758bbd279c044cc6dc5d4ed8cc5a4651"
+  },
+  {
+    "path": "experiments/phase1/r2-3-combined/run_config.json",
+    "sha256": "dd307bfc67cdb5b1de439a14ebe33e8b273d1955ec2fe9c1487583d0cbc36193"
+  },
+  {
+    "path": "experiments/phase1/r2-4-belief/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "c3267e4ab870657be2818ca7eb79e1a4e9a20cf85f291024e286d0512afb73ba"
+  },
+  {
+    "path": "experiments/phase1/r2-4-belief/artifacts/usage.jsonl",
+    "sha256": "432e9e414852fb059fe6eed3e19c64dc2d88de1df35da2b8fcea70a3252d4d87"
+  },
+  {
+    "path": "experiments/phase1/r2-4-belief/benchmark.json",
+    "sha256": "c6bde376f78a88f62db9df111754989243d089f09da873d61ba5db79ed4301b2"
+  },
+  {
+    "path": "experiments/phase1/r2-4-belief/run_config.json",
+    "sha256": "2e02c93f595e6372091b42c141053667fefb1356d4849d13755d6feea0a8708a"
+  },
+  {
+    "path": "experiments/phase1/report.md",
+    "sha256": "dbb785d01d395a2fb2a8b596764b6da30e4a5fdcc2e8a50b78d9a8d982ad3b69"
+  },
+  {
+    "path": "experiments/phase1/summary.csv",
+    "sha256": "7b6e34465560cdde5753ae378bad1e15b0ccc7c336d57d199f63c86964c9675f"
+  },
+  {
+    "path": "experiments/phase1/summary.json",
+    "sha256": "6813e214a261bb2bf17fe5f286b7689095ffb1a18847f7b18909ffe5ae47564a"
+  },
+  {
+    "path": "experiments/phase2/analysis.json",
+    "sha256": "145790bd6b8f081362a3c4b0b3ec57ece8bc135ffc769278856c5d3fd11207b7"
+  },
+  {
+    "path": "experiments/phase2/analysis.md",
+    "sha256": "44c885376ebecc67d0124ed84e4e53d18a51d7c561762ca2e6767750e788a540"
+  },
+  {
+    "path": "experiments/phase2/r1-1-combined/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "4295b36c1a76f3c5c8b4605707449e774bf5935f4fcf00d74752472b7d25fa9a"
+  },
+  {
+    "path": "experiments/phase2/r1-1-combined/artifacts/usage.jsonl",
+    "sha256": "0399bcf287e33b2032b9db5f2626ae0227961f0b0d598c57a9f413595009edb8"
+  },
+  {
+    "path": "experiments/phase2/r1-1-combined/benchmark.json",
+    "sha256": "379c1a684bf3af60d8c50630edc048c615bbfafb874594f2f14098383a7cc495"
+  },
+  {
+    "path": "experiments/phase2/r1-1-combined/run_config.json",
+    "sha256": "17eeda5c253f52df55d0ffd8884b3d3c358d1dc4b2be44f3cb17c898dbabc85d"
+  },
+  {
+    "path": "experiments/phase2/r1-2-belief/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "6a24eba012abd156c5df151d598afc3f2f5f31505c7ea8205b7242d94ceec3cd"
+  },
+  {
+    "path": "experiments/phase2/r1-2-belief/artifacts/usage.jsonl",
+    "sha256": "f30e6278dac172d52f57a9c06c9581e8e8af84751dcc00ee321e30b3011125f8"
+  },
+  {
+    "path": "experiments/phase2/r1-2-belief/benchmark.json",
+    "sha256": "72a15ad54062b17a3e8f06bf47be943d9996ed7d42d1c60e27d872149f9d42a0"
+  },
+  {
+    "path": "experiments/phase2/r1-2-belief/run_config.json",
+    "sha256": "ff75b2f4529c1227ee1aaa6cc0edbe3a8e8e851582fcb0c9c91c55305606986b"
+  },
+  {
+    "path": "experiments/phase2/r1-3-baseline/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "2df77a9d5fd668de8721b59dd64da305748d573fbccedeaa276bedffe37dc356"
+  },
+  {
+    "path": "experiments/phase2/r1-3-baseline/artifacts/usage.jsonl",
+    "sha256": "16328df64adc005f5216863dd3938d2475ab7e6d0811504807785a6872a4aca1"
+  },
+  {
+    "path": "experiments/phase2/r1-3-baseline/benchmark.json",
+    "sha256": "57dcef58176d60ee54fc7f553ec3a292001319732d9218fbcc5457f16ac4ee88"
+  },
+  {
+    "path": "experiments/phase2/r1-3-baseline/run_config.json",
+    "sha256": "f390fc93e886ee7aa1294533fcb4c7a08455fdc48d08a50f6716c8bff7280345"
+  },
+  {
+    "path": "experiments/phase2/r1-4-prediction/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "1626746d6991cf9157ba74143783f4c05ccc91cbf17a90135459b37802a3c096"
+  },
+  {
+    "path": "experiments/phase2/r1-4-prediction/artifacts/usage.jsonl",
+    "sha256": "a1f5f6ca250a3159126e482dbca1467ca13aff3b5b603fcbc237183f098b2cfc"
+  },
+  {
+    "path": "experiments/phase2/r1-4-prediction/benchmark.json",
+    "sha256": "43b45f853c8ffa9a1d954b7c012ccca28fd84c95e788d163a5a5d1d8d71522df"
+  },
+  {
+    "path": "experiments/phase2/r1-4-prediction/run_config.json",
+    "sha256": "bdf54eadd155ecfc996ae142467092a2af042e717d78ee256a0f704997001ca9"
+  },
+  {
+    "path": "experiments/phase2/r2-1-belief/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "5cc71e716d6d176b66d5c8a814a66a92fbf7a357dcaed72119d2cc3c59259506"
+  },
+  {
+    "path": "experiments/phase2/r2-1-belief/artifacts/usage.jsonl",
+    "sha256": "869d72143b3efda254a6121bb652db107b1cfe5f1e2cf7f89a8969679c780b2e"
+  },
+  {
+    "path": "experiments/phase2/r2-1-belief/benchmark.json",
+    "sha256": "3cf56c3803ca2b6cad031b26e2244d6f8d4691c95a661262cd676f1ccac1089d"
+  },
+  {
+    "path": "experiments/phase2/r2-1-belief/run_config.json",
+    "sha256": "59f214ef74d650b8288b312caacb143c5078c9fe35aacdd0f1c842d0df09fa52"
+  },
+  {
+    "path": "experiments/phase2/r2-2-prediction/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "f5a2e448605198bf18b52d23178355d96ea2f05cd9e7041ba6ab01d5f7bd716a"
+  },
+  {
+    "path": "experiments/phase2/r2-2-prediction/artifacts/usage.jsonl",
+    "sha256": "6689bf84ba873d735fcf8e1bcf79c946a64f5a4d86bcf47b63e12b3ba1926dc6"
+  },
+  {
+    "path": "experiments/phase2/r2-2-prediction/benchmark.json",
+    "sha256": "f50659a0c443397ac41013f1b66d194302b4df1c9cbb75a17c105076c7565673"
+  },
+  {
+    "path": "experiments/phase2/r2-2-prediction/run_config.json",
+    "sha256": "3ab3415b0554255fa3be52b8d7cc9ef793dcfa7f8749c62fca6491d195b1ad42"
+  },
+  {
+    "path": "experiments/phase2/r2-3-baseline/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "bb15214eeb49822c9831a6cce9d3c121c8dc7c932437c298dc5d50cd6d9d4d4c"
+  },
+  {
+    "path": "experiments/phase2/r2-3-baseline/artifacts/usage.jsonl",
+    "sha256": "51298e4da18af2a74250541fd5096ce71e233bf4ac4377b2a66881f695a37546"
+  },
+  {
+    "path": "experiments/phase2/r2-3-baseline/benchmark.json",
+    "sha256": "4cb5191668f92c106d7dd115df42df0703a43ab32f818ec2b8b4dd255f6be109"
+  },
+  {
+    "path": "experiments/phase2/r2-3-baseline/run_config.json",
+    "sha256": "31bd5d38c38b7715cbe8ea2c6cd59f0c6ec3106c27ccecce831515b0f6020050"
+  },
+  {
+    "path": "experiments/phase2/r2-4-combined/artifacts/ls20-9607627b_p0_events.jsonl",
+    "sha256": "379baa5134412eb1e43c0fbcb071d58fdf8ada4928761e97ea6accada425c806"
+  },
+  {
+    "path": "experiments/phase2/r2-4-combined/artifacts/usage.jsonl",
+    "sha256": "3e52521e1163f913b48bbd007047b10e39d64835787f6210264b30adbc79aa8e"
+  },
+  {
+    "path": "experiments/phase2/r2-4-combined/benchmark.json",
+    "sha256": "1950cced69d820136ac2034dbe59cbe8b1ab9b5e5bfd016cbd7dfd29ee4eb188"
+  },
+  {
+    "path": "experiments/phase2/r2-4-combined/run_config.json",
+    "sha256": "2c4856c0348929441c874b51d9a81232068f5da9ad51a073af31c927c7655169"
+  },
+  {
+    "path": "experiments/phase2/report.md",
+    "sha256": "187a2aaae4e5d9ecd98538a04d78a1f9bd98a0411096607a7fb7160157bf13e1"
+  },
+  {
+    "path": "experiments/phase2/summary.csv",
+    "sha256": "55c52548562553ff40d37b8321f789ceb9709ed89b50eb6e855dee87f00a05d8"
+  },
+  {
+    "path": "experiments/phase2/summary.json",
+    "sha256": "4fb379bfc5bc2eb3adfe60040fe42e9d5320b9b4c235e8f2f49a0c6def631cba"
+  },
+  {
+    "path": "protocols/PREDICTION_EXPERIMENT.md",
+    "sha256": "8b6074f3fe1436d1abd893f6534015d5d79948e29be2d4465667ad0a55bcdeb6"
+  },
+  {
+    "path": "protocols/VERIFIED_EXPERIMENT.md",
+    "sha256": "1f92162df559633f70f1ea1e14996bd2ecab9879f8a2a0cfadd3c02cf784fb2f"
+  },
+  {
+    "path": "reports/historical.md",
+    "sha256": "2b3a89539f709ecabed4040e3ea131d8d8716561a0fa0d838a10def60fdd0349"
+  },
+  {
+    "path": "reports/phase1.md",
+    "sha256": "3099bc9665a16597424ff2b85b514b587ffc8e41830f8ead86a831d57038f140"
+  },
+  {
+    "path": "reports/phase2.md",
+    "sha256": "1740b94ea59a872e1bc1cb96845ab1e4bdb99ce586f48096150e42edc3395dd0"
+  }
+]
