@@ -36,6 +36,25 @@ export PYTHONPATH=/tmp/duck-live/ARC3-Inference:/tmp/duck-live/tufa-arc-agi-fram
 
 默认寻找系统 `bwrap`。若使用单独解包的发行版程序，可在可信宿主设置绝对路径 `DUCK_BWRAP`；此路径是管理员配置，不得来自模型输出或不可信项目内容。
 
+### Ubuntu AppArmor 前置条件
+
+启用 userns 限制的 Ubuntu 主机可能返回 `loopback: Failed RTM_NEWADDR: Operation not permitted` 或 userns 权限错误。这表示宿主策略未允许该应用创建所需隔离，并非应退回普通进程。先运行固定启动探针查看诊断。
+
+仓库提供 [按程序作用的 AppArmor 配置](apparmor/duck-bwrap)。管理员可选择给专用、root 拥有的 Bubblewrap 副本设置 userns 前置条件，而不关闭全局 AppArmor 或全局 userns 限制：
+
+```bash
+sudo apt-get install apparmor
+sudo install -D -m 0755 /usr/bin/bwrap /usr/local/libexec/duck-bwrap
+sudo install -m 0644 runtime/apparmor/duck-bwrap /etc/apparmor.d/duck-bwrap
+sudo apparmor_parser -r /etc/apparmor.d/duck-bwrap
+export DUCK_BWRAP=/usr/local/libexec/duck-bwrap
+/usr/bin/python3 runtime/check_environment.py
+```
+
+这是一项管理员可见的宿主策略变更，不由运行库自动执行。规则只匹配专用二进制路径；该文件应保持 root 所有，发行版 Bubblewrap 更新后同步刷新副本。CI 在一次性 runner 内安装此规则，本次没有修改用户 WSL 的 AppArmor 配置。`unconfined` 是 Ubuntu 按应用允许 userns 的配置模式，不是取消本运行器的 namespaces、seccomp 或资源上限；隔离目录不挂载这个宿主二进制，子进程也被禁止创建新 namespace。
+
+依据：[Ubuntu 24.04 user namespace 变更说明](https://discourse.ubuntu.com/t/ubuntu-24-04-lts-noble-numbat-release-notes/39890)。
+
 ## 固定执行边界
 
 | 项目 | 当前策略 |

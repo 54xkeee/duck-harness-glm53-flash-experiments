@@ -14,13 +14,17 @@ jobs:
     env:
       PYTHONUTF8: '1'
       PYTHONDONTWRITEBYTECODE: '1'
+      DUCK_BWRAP: /usr/local/libexec/duck-bwrap
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install OS isolation facilities
         run: |
           sudo apt-get update
-          sudo apt-get install -y bubblewrap libseccomp2 python3-venv
+          sudo apt-get install -y bubblewrap libseccomp2 python3-venv apparmor
           /usr/bin/bwrap --version
+          sudo install -D -m 0755 /usr/bin/bwrap /usr/local/libexec/duck-bwrap
+          sudo install -m 0644 runtime/apparmor/duck-bwrap /etc/apparmor.d/duck-bwrap
+          sudo apparmor_parser -r /etc/apparmor.d/duck-bwrap
       - name: Check fixed isolation startup and report prerequisite errors
         run: /usr/bin/python3 runtime/check_environment.py
       - name: Verify frozen evidence and archive
