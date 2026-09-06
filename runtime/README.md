@@ -16,18 +16,20 @@
 sudo apt-get update
 sudo apt-get install bubblewrap libseccomp2 python3-venv
 /usr/bin/python3 runtime/build_runtime.py --verify-frozen
-/usr/bin/python3 runtime/tests/test_isolation.py
 /usr/bin/python3 runtime/build_runtime.py /tmp/duck-live
 
 /usr/bin/python3 -m venv /tmp/duck-host-env
 /tmp/duck-host-env/bin/python -m pip install --upgrade pip==26.2.1
 /tmp/duck-host-env/bin/python -m pip install --require-hashes -r runtime/requirements-test.txt
+/tmp/duck-host-env/bin/python runtime/tests/test_isolation.py
 export PYTHONPATH=/tmp/duck-live/ARC3-Inference:/tmp/duck-live/tufa-arc-agi-framework/src
 /tmp/duck-host-env/bin/python -m pytest -q -p no:cacheprovider /tmp/duck-live/ARC3-Inference/tests/test_prediction_io.py
 /tmp/duck-host-env/bin/python -m inference.framework.run --help
 ```
 
 这组命令仅构建、验证和显示帮助，不发送模型请求。正式运行另需操作者的游戏与模型配置；当前资料不是完整 GPU 服务发行包。模型连接只在可信宿主侧，密钥不传给 Python 工具沙箱。
+
+宿主包入口会加载图像/工具代理模块，所以先安装宿主测试依赖，再运行隔离测试；子进程内部仍只使用固定的系统 Python 标准库，不挂载宿主虚拟环境。
 
 `requirements-test.txt` 固定宿主离线集成测试的依赖及下载哈希。它不是冻结实验当时的原始依赖清单，也不包含 GPU 推理服务。更新时从 `requirements-test.in` 重新生成、扫描并回归测试。
 
