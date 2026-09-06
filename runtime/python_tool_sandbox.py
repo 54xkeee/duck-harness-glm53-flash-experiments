@@ -296,6 +296,9 @@ _SANDBOX_BOOTSTRAP = textwrap.dedent(
                     entry["col"] = item.get("col")
                 if "prediction" in item:
                     entry["prediction"] = item["prediction"]
+                for key in ("expected", "state_key", "rule_id", "retry_reason"):
+                    if key in item:
+                        entry[key] = item[key]
                 normalized.append(entry)
                 continue
             raise TypeError(f"Action {index} must be a string or a dict.")
@@ -362,6 +365,8 @@ _SANDBOX_BOOTSTRAP = textwrap.dedent(
             runtime_globals["last_action_result"] = action_result
             runtime_globals["evidence_beliefs"] = state_payload.get("evidence_beliefs", {})
             runtime_globals["prediction_state"] = state_payload.get("prediction_state", {})
+            runtime_globals["causal_workspace"] = state_payload.get("causal_workspace", {})
+            runtime_globals["HOST_RECEIPT"] = state_payload.get("HOST_RECEIPT", {})
 
         def action(actions):
             normalized_actions = _normalize_actions(actions)
