@@ -1,0 +1,47 @@
+name: runtime-security
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  isolation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install OS isolation facilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bubblewrap libseccomp2 python3-venv
+          /usr/bin/bwrap --version
+      - name: Verify frozen evidence and archive
+        run: |
+          /usr/bin/python3 runtime/build_runtime.py --verify-frozen
+          /usr/bin/python3 tools/verify_archive.py
+      - name: Exercise real OS isolation, limits and fail-closed paths
+        run: /usr/bin/python3 runtime/tests/test_isolation.py
+      - name: Install hash-locked host test dependencies
+        run: |
+          /usr/bin/python3 -m venv "$RUNNER_TEMP/duck-test-env"
+          "$RUNNER_TEMP/duck-test-env/bin/python" -m pip install --upgrade pip==26.2.1
+          "$RUNNER_TEMP/duck-test-env/bin/python" -m pip install --require-hashes -r runtime/requirements-test.txt
+      - name: Materialize hardened runtime and run archived integration regressions
+        run: |
+          /usr/bin/python3 runtime/build_runtime.py "$RUNNER_TEMP/duck-live"
+          export PYTHONPATH="$RUNNER_TEMP/duck-live/ARC3-Inference:$RUNNER_TEMP/duck-live/tufa-arc-agi-framework/src"
+          "$RUNNER_TEMP/duck-test-env/bin/python" -m pytest -q -p no:cacheprovider "$RUNNER_TEMP/duck-live/ARC3-Inference/tests/test_prediction_io.py"
+      - name: Audit installed host test dependency versions
+        run: |
+          /usr/bin/python3 -m venv "$RUNNER_TEMP/duck-audit-env"
+          "$RUNNER_TEMP/duck-audit-env/bin/python" -m pip install --upgrade pip==26.2.1
+          "$RUNNER_TEMP/duck-audit-env/bin/python" -m pip install pip-audit==2.10.1
+          "$RUNNER_TEMP/duck-audit-env/bin/python" -m pip_audit --path "$RUNNER_TEMP/duck-test-env/lib/python3.12/site-packages"
+      - name: Verify frozen evidence after tests
+        run: /usr/bin/python3 runtime/build_runtime.py --verify-frozen

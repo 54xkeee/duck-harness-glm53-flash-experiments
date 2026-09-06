@@ -1,6 +1,8 @@
 # Duck Harness × GLM-5.3-Flash 实验资料
 
-面向 ChatGPT 阅读、讨论与代码审阅的**私有研究资料仓库**。资料截止日期：2026-09-04。
+面向 ChatGPT 阅读、讨论与代码审阅的**研究资料仓库**。实验资料截止日期：2026-09-04。
+
+**执行前先读：[安全边界](SECURITY.md)与[加固运行入口](runtime/README.md)。** 2026-09-06 的审查发现冻结版本的 Python 隔离缺口。冻结快照与实验数据原样保留；需执行时从 `runtime/` 构建独立运行目录，采用 Linux 操作系统级隔离，不直接运行有已知缺陷的冻结入口。加固版尚未重跑游戏性能实验。
 
 研究目标：让模型通过「假设 → 动作前预测 → 真实动作 → 下一状态校验 → 反例修订」理解 ARC-AGI-3 交互游戏，而不是仅输出貌似合理的规则解释。
 
@@ -28,7 +30,7 @@
 ## 给 ChatGPT 的提示词
 
 ```text
-请阅读这个私有仓库的 README.md，然后阅读 docs/HANDOFF.md 和 docs/EVIDENCE_MAP.md。
+请阅读这个仓库的 README.md，然后阅读 docs/HANDOFF.md 和 docs/EVIDENCE_MAP.md。
 需要时继续读取 experiments/phase2/analysis.md、docs/CASE_EXCERPTS.md 和 code/README.md。
 
 我的目标不是让你重新包装成一份乐观报告，而是帮助判断：
@@ -40,7 +42,7 @@
 请保留零分和失败样本。不要把 13 步成功局等同于稳定改进，不要把 64.21% 局部预测匹配率当作完整世界模型准确率。
 历史 reasoning effort 和 server-default 输出上限是未知；不要补写成 high/max。
 当前补丁通过测试，不代表已经获得新的通关成绩。
-若你的 GitHub 连接尚未取得该私有仓库的访问范围，请明确说明没有读取，而不要根据仓库名猜测内容。
+若你的 GitHub 连接没有实际读取仓库内容，请明确说明没有读取，而不要根据仓库名猜测内容。
 ```
 
 ## 核心结果
@@ -92,4 +94,4 @@ python tools/verify_archive.py
 
 实验基于 [Tufalabs/duck-harness](https://github.com/Tufalabs/duck-harness)。归档代码保留原有版权和注释；此仓库没有为上游代码重新声明许可证。
 
-本仓库为私有；单独粘贴链接不保证另一个对话拥有读取权限。也可以直接下载 HANDOFF.md 上传给目标对话。
+保留原有代码来源声明；没有为全部上游快照重新指定统一使用条款。阅读交接材料也可以直接下载 HANDOFF.md 上传给目标对话。
